@@ -1,2 +1,2 @@
 # Ecommerce-clone
-kimaye-clone
+kimaye-clone our construct week project
