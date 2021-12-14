@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <style>
+<!--availablely checking-->
+.aval{
+    height:35px;
+    width:100%;
+    background-color:#471;
+    color:white;
+    text-align:center;
+    padding-top:5px;
+    font-size:20px;
+}
+<!--Contener-->
+#contner{
+    width:100%;
+    margin:auto;
+    background-color:#eef;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:20px;
+    justify-content:space-between;
+    
+
+}
+#obj>div{
+    height:300px;
+   
+    background-color:#eef;
+}
+.main_bar{
+    height:200px;
+    background-color:#eef;
+    width:100%;
+  
+   
+}
+<!--Navbar-->
+.optionarea{
+    display:flex;
+    margin:20px;
+}
+<!--Product Image-->
+.img{
+    height:300px;
+    width:100%;
+    border-radius:20px;
+    overflow: hidden;
+    margin: 0 auto;
+    transition: 0.5s all ease-in-out;
+}
+<!--Image Hover-->
+.img:hover{
+    transform: scale(1.1);
+}
+<!--Name of Product-->
+.nameoff{
+    font-size:15px;
+    font-weight:bold;
+    text-align:center;
+}
+<!--price of Product-->
+.prc{
+    font-size:25px;
+    color:red;
+    text-align:center;
+}
+<!--Navbar Text-->
+.main_bar>div{
+    margin:25px;
+    cursor: pointer;
+    
+    
+}
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;color:green;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;
+  }
+  #kimiimg{
+      display:block;
+      height:25%;
+      width:10%;
+      margin-left:auto;
+      margin-right:auto;
+      margin-top:-65px;   
+  }
+  .bottommenu{
+    display:flex;
+    width:50%;
+    margin:auto; 
+    padding:10px;
+    background-color:#eef;
+  }
+  .bottommenu>div{
+      font-size:15px;
+      margin-left:30px;
+      cursor: pointer;
+  }
+  .bottommenu>div:hover{
+      text-decoration:underline;
+  }
+  </style>
+  </head>
+  <body>
+      <div class="aval"> Currently available in Mumbai | Same day </div>
+      <div class="main_bar">
+               <div class="dropdown"> SHOP^
+                <div class="dropdown-content">
+                  <a href="#">ALL FRUITS</a>
+                  <a href="#">FRESS CUTS</a>
+                  <a href="#">FRESH COMBOS</a>
+                  <a href="#">GIFT BY KIMAYE</a>
+                  <a href="#">COMUNITY BYING</a>
+                  <a href="#">FRUTS S</a>
+                  <a href="#">REFUND AND REPLACEMENT</a>
+                </div>
+              </div>
+              <div class="dropdown"> LEARN^
+                <div class="dropdown-content">
+                  <a href="#">OUR STORY</a>
+                  <a href="#">WHY KIMAYE</a>
+                  <a href="#">TRACEABILITY</a>
+                  <a href="#">BEYOND FRUITS</a>
+                   </div>
+              </div>
+              <button style="margin-left:25px;border:0px;cursor: pointer;"> GROW</button>
+              
+              <img id="kimiimg" src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/website-logo.png?height=628&pad_color=ececec&v=1596288204&width=1200" alt="img">
+               </div>
+               
+    
+     <div id="contner"></div>
+       <div class="bottommenu">
+           <div>ALL FRUITS </div>
+           <div>FRESS CUTS </div>
+           <div>FRUITS COMBOS </div>
+           <div>GIFT BY KIMAYE </div>
+       </div>  
+    
+ 
+ 
+ 
+  </body>
+</html>
+<script>
+    var data = [
+    {
+      
+      name: "Kimaye Cherries(Imported) (Pack of 125g, 250g & 500g)",
+      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/cherry-imported-2A.progressive.jpg?v=1629455322",
+      price: "₹ 359 – ₹ 1,399"
+    },
+    {
+      
+      name: "Kimaye Guava (Pack of 3 & 6)" ,
+      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Copy_of_ThaiGuava_Isolated.png?v=1639203167",
+      price: "₹ 60 – ₹ 109"
+    },
+    {
+      
+      name: "Kimaye Avocado Imported (1pc ≈ 250g)",
+      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Avocado.progressive.jpg?v=1622045722",
+      price: "₹ 339"
+    },
+    {
+      
+        name: "Kimaye Imported Oranges (Pack of 3 & 6)",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/a0cfceb5-76a4-4994-9d37-978c6dc3b309.png?v=1611811512",
+        price: "₹ 140"
+      },
+      {
+      
+        name: "Kimaye Nagpuri Santra (2 pc & 4 pc )",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Nagpuri-santra-cover_dfe991ef-cd37-45a4-94f7-b3225779ab6f_360x.jpg?v=1634627098",
+        price: "₹ 59 – ₹ 112"
+      },
+      {
+      
+        name: "Kimaye Plum (5-6 pcs ≈ 450 g to 500 g)",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Picture3_360x.jpg?v=1636633326",
+        price: "₹ 219"
+      },
+      {
+      
+        name: "Kimaye Strawberries (Pack of 200 g & 400 g)",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/c54118d4-fe2a-4805-aa25-777c029932ee_360x.png?v=1614327346",
+        price: "₹ 249 – ₹ 479"
+      },
+      {
+      
+        name: "Kimaye Berry Combo",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/5c874170-4b51-4c5c-839d-57f4177e3034-min_360x.png?v=1614324976",
+        price: "₹ 577 – ₹ 795"
+      },
+      {
+      
+        name: "Kimaye Avocado Imported (1pc ≈ 250g)",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Avocado_360x.jpg?v=1622045722",
+        price: "₹ 339"
+      },
+      {
+      
+        name: "Kimaye Muskmelon (1 pc)",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Muskmelon-cover_360x.jpg?v=1633763200",
+        price: "₹ 99"
+      },
+      {
+      
+        name: "Kimaye Dragon Fruit (1 pc)",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/dragon-fruit--white-cover_360x.jpg?v=1632470660",
+        price: "₹ 127"
+      },
+      {
+      
+        name: "Kimaye Washington Apples (Pack of 2 & 4)",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/d109e625-23d6-49b2-ad4f-433ac292cece_360x.png?v=1613364161",
+        price: "₹ 154 – ₹ 297"
+      },
+
+      {
+      
+        name: "Kimaye Blueberries (125g)",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/5e8b2ee6-ce8e-42e9-959f-d43c544f586a_360x.png?v=1616326949",
+        price: "₹ 358"
+      },
+      {
+      
+        name: "Kimaye Kinnaur Apples (Pack of 3 & 6)",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Kinnaur-Apples-cover_360x.jpg?v=1634226790",
+        price: "₹ 125 – ₹ 239"
+      },
+      {
+      
+        name: "Kimaye Golden Kiwis (3 pcs ≈ 300 g)",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/golden-kiwi-cover_360x.jpg?v=1625147312",
+        price: "₹ 249"
+      },
+      {
+      
+        name: "Kimaye Mini Oranges (6 pcs) ",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Mini-Oranges-cover_360x.jpg?v=1631890350",
+        price: "₹ 163"
+      },
+
+      {
+      
+        name: "Red Globe Imported (400g)",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/bd07b8e7-3643-4a98-996e-c85fd7d133a8_360x.png?v=1614765886",
+        price: "₹ 220"
+      },{
+      
+        name: "Kimaye Thai Guava (1 pc ≈ 0.4-0.5 kg)",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/CopyofGuava_Main_Clean_360x.png?v=1606828311",
+        price: "₹ 63"
+      },
+      {
+      
+        name: "Kimaye Plum (5-6 pcs ≈ 450 g to 500 g)",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Picture3_360x.jpg?v=1636633326",
+        price: "₹ 219"
+      },
+      {
+      
+        name: "Kimaye Plum (5-6 pcs ≈ 450 g to 500 g)",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Picture3_360x.jpg?v=1636633326",
+        price: "₹ 219"
+      },
+      {
+      
+        name: "Kimaye Plum (5-6 pcs ≈ 450 g to 500 g)",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Picture3_360x.jpg?v=1636633326",
+        price: "₹ 219"
+      },
+      {
+      
+        name: "Kimaye Plum (5-6 pcs ≈ 450 g to 500 g)",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Picture3_360x.jpg?v=1636633326",
+        price: "₹ 219"
+      },
+      {
+      
+        name: "Kimaye Plum (5-6 pcs ≈ 450 g to 500 g)",
+        image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Picture3_360x.jpg?v=1636633326",
+        price: "₹ 219"
+      },
+
+    
+  ];
+  data.map(function(elem){
+    var firstDiv=document.createElement("div");
+    firstDiv.setAttribute("class","main")
+
+    var img=document.createElement("img");
+    img.setAttribute("class","img")
+    img.setAttribute("src",elem.image);
+    var h4=document.createElement("p");
+    h4.setAttribute("class","nameoff")
+    h4.textContent=elem.name;
+    var para=document.createElement("p");
+    
+    para.setAttribute("class","prc")
+    para.textContent=elem.price;
+    firstDiv.append(img,h4,para);
+    document.getElementById("contner").append(firstDiv);
+});
+</script>
