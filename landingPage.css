@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+}
+
+/* main cointainer styling */
+
+.container {
+    height: 4765px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 35px 70px 550px 170px 1200px 680px 170px 500px 580px 550px 260px;
+    grid-template-areas: 
+    "a a a a a a a a a a a a"
+    "b b b b b b b b b b b b"
+    "c c c c c c c c c c c c"
+    "d d d d d d d d d d d d"
+    "e e e e e e e e e e e e"
+    "f f f f f f f f f f f f"
+    "g g g g g g g g g g g g"
+    "h h h h h h h h h h h h"
+    "i i i i i i i i i i i i"
+    "j j j j j j j j j j j j"
+    "k k k k k k k k k k k k"
+    ;
+}
+
+/* first div available in mumbai text styling */
+
+.container>div:nth-child(1) {
+    line-height: 60%;
+    color: white;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    grid-area: a;
+    background-color: #437111;
+}
+
+/* Navigation bar styling */
+
+.navbar {
+    grid-area: b;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar>div:nth-child(1) {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* styling for left and right image select option */
+
+.productImage {
+    grid-area: c;
+    border: 1px solid red;
+}
+
+/* styling for recommend text */
+
+.recommends {
+    grid-area: d;
+    border: 1px solid red;
+    background-color: #edede8;
+    text-align: center;
+}
+
+.recommends>h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.recommends>p {
+    font-size: 25px;
+    font-family: "PT Sans", sans-serif;
+}
+
+/* styling for recommend products */
+
+.recProducts {
+    grid-area: e;
+    border: 1px solid red;
+    background-color: #edede8;
+}
+
+.recProducts>div {
+    height: 95%;
+    width: 80%;
+    margin: auto;
+    margin-top: 2.5%;
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5%;
+}
+
+.recProducts>div>div>div:nth-child(1)>img {
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.recProducts>div>div>div:nth-child(2) {
+    text-align: center;
+}
+
+/* styling for know more option */
+
+.knowMore {
+    grid-area: f;
+    border: 1px solid red;
+}
+
+/* styling for our journey text*/
+
+.ourJourney {
+    grid-area: g;
+    border: 1px solid red;
+}
+
+/* styling for our journey info*/
+
+.journeyinfo {
+    grid-area: h;
+    border: 1px solid red;
+}
+
+/* styling for jazz it up*/
+
+.jazzitUp {
+    grid-area: i;
+    border: 1px solid red;
+}
+
+/* styling for psst*/
+
+.psst {
+    grid-area: j;
+    border: 1px solid red;
+    background-color: #edede8;
+}
+
+.psst>div:nth-child(1){
+    padding-top: 1%;
+    height: 150px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.psst>div:nth-child(2){
+    width: 85%;
+    margin: auto;
+    display: flex;
+}
+
+.psst>div:nth-child(2)>div{
+    margin: 0.7%;
+}
+
+.psst>div:nth-child(2)>div>img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* styling for footer*/
+
+.footer {
+    grid-area: k;
+    background-color: #7d9c5b;
+}
+
+.footer>div {
+    height: 80%;
+    margin: 2% 5%;
+}
+
+.footer>div>div:nth-child(1) {
+    height: 65%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "PT Sans", sans-serif;
+    line-height: 21px;
+}
+
+ul>li {
+    cursor: pointer;
+}
+
+li:hover {
+    color: #cd171f;
+}
+
+#logo {
+    display: flex;
+}
+
+#logo>li {
+    padding-right: 6%;
+}
+
+.footer>div>div:nth-child(3) {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#copyright {
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
