@@ -5,10 +5,10 @@
 /* main cointainer styling */
 
 .container {
-    height: 4765px;
+    height: 4865px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 35px 70px 550px 170px 1200px 680px 170px 500px 580px 550px 260px;
+    grid-template-rows: 35px 70px 550px 170px 1300px 680px 170px 500px 580px 550px 260px;
     grid-template-areas: 
     "a a a a a a a a a a a a"
     "b b b b b b b b b b b b"
@@ -42,13 +42,72 @@
     grid-area: b;
     border: 1px solid red;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    margin-top: 35px;
+    background-color: #eeeeea;
+}
+
+.navbar>div:nth-child(1) {
+    height: 100%;
+    width: 20%;
+    border: 1px solid red;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.navbar>div:nth-child(1) {
+.dropdown {
+    font-family:"PT Sans", serif;
+    font-size: 17px;
+    height: 100%;
+    margin-top: 18%;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 40px;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    color: #6d6d6d;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+}
+
+#grow {
+    cursor: pointer;
+}
+
+.dropdown-content a:hover {
+    color:#98cb4c;
+    padding-left: 10%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar>div:nth-child(3) {
+    width: 150px;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 /* styling for left and right image select option */
@@ -95,14 +154,39 @@
     grid-gap: 5%;
 }
 
+.recProducts>div>div>div:nth-child(1) {
+    overflow: hidden;
+    border-radius:30px;
+}
+
 .recProducts>div>div>div:nth-child(1)>img {
     height: 100%;
     width: 100%;
     border-radius: 30px;
 }
 
+.recProducts>div>div>div:nth-child(1)>img:hover {
+    transform: scale(1.1);
+    transition: 0.5s all ease-in-out;
+}
+
 .recProducts>div>div>div:nth-child(2) {
     text-align: center;
+}
+
+.recProducts>div>div>div:nth-child(2)>p {
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+button {
+    padding: 2.5% 7%;
+    border-radius: 20px;
+    background-color: #cd171f;
+    color: white;
+    cursor: pointer;
+    border: none;
 }
 
 /* styling for know more option */
