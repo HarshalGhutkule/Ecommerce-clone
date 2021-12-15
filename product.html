@@ -2,17 +2,17 @@
 <html lang="en">
   <head>
   <style>
-<!--availablely checking-->
+
 .aval{
     height:35px;
     width:100%;
     background-color:#471;
     color:white;
     text-align:center;
-    padding-top:5px;
     font-size:20px;
+    margin-bottom:0px;
 }
-<!--Contener-->
+
 #contner{
     width:100%;
     margin:auto;
@@ -32,16 +32,35 @@
 .main_bar{
     height:200px;
     background-color:#eef;
-    width:100%;
-  
-   
+    width:100%;  
 }
-<!--Navbar-->
-.optionarea{
-    display:flex;
-    margin:20px;
+.main_bar .dropdown{
+  cursor:pointer
 }
-<!--Product Image-->
+.header{
+  height:20%;
+  border:1px solid black;
+  margin-top:0px;
+  padding:10px;
+}
+.header>div{
+  margin-left:20px;
+}
+.bottomhead{
+  height:45%;
+  border:1px solid green;
+  display:flex;
+  justify-content:center;
+}
+.bottomhead>div{
+  margin-left:20px;
+  cursor:pointer;
+}
+.bottomhead>div:hover{
+  text-decoration:underline;
+}
+
+
 .img{
     height:300px;
     width:100%;
@@ -50,28 +69,21 @@
     margin: 0 auto;
     transition: 0.5s all ease-in-out;
 }
-<!--Image Hover-->
+
 .img:hover{
     transform: scale(1.1);
 }
-<!--Name of Product-->
+
 .nameoff{
     font-size:15px;
     font-weight:bold;
     text-align:center;
 }
-<!--price of Product-->
+
 .prc{
     font-size:25px;
     color:red;
     text-align:center;
-}
-<!--Navbar Text-->
-.main_bar>div{
-    margin:25px;
-    cursor: pointer;
-    
-    
 }
 .dropbtn {
     background-color: #04AA6D;
@@ -110,55 +122,147 @@
   }
   #kimiimg{
       display:block;
-      height:25%;
+      height:95%;
       width:10%;
       margin-left:auto;
       margin-right:auto;
-      margin-top:-65px;   
+      margin-top:-20px;   
   }
   .bottommenu{
     display:flex;
-    width:50%;
+    width:95%;
     margin:auto; 
     padding:10px;
     background-color:#eef;
   }
   .bottommenu>div{
       font-size:15px;
-      margin-left:30px;
+      margin-left:auto;
       cursor: pointer;
   }
   .bottommenu>div:hover{
       text-decoration:underline;
   }
+  #slide{
+    height:150px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-gap:20px;
+  }
+  #slide>div{
+     margin-top:30px;
+     height:100%;
+     
+  }
+  .slideimg{
+    height:60%;
+    width:280%;
+    border-radius:20px;
+    cursor:pointer;
+    overflow: hidden;
+    margin: 0 auto;
+    transition: 0.5s all ease-in-out;
+  }
+ 
+  .slidename{
+    font-size:20px;
+    text-align:center;
+    cursor:pointer;
+    padding-top:20px;
+  }
+  .slideprice{
+    font-size:30px;
+    color:red;
+    text-align:center;
+    cursor:pointer;
+
+  }
+  
+  .hover-animation {
+    position: relative;
+    height: 280px;
+    width: 100%;
+    color: #fff;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+    border-radius:20px;
+    
+  }
+  .hover-animation img {
+    position: absolute;
+    border-radius:20px;
+    left: 0;
+    width: 100%;
+    height: 280px;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+  }
+  .hover-animation img.slideimg1:hover{
+    opacity:0;
+    cursor: pointer;
+    
+  }
+  .slideimg2{
+    transform: scale(1.2);
+  }
+  .headIcon{
+  width:20%;
+  height:30px;
+  position:absolute;
+  right:15px;
+  border:1px solid blue;
+  display:flex;
+  margin-top:-30px;
+  justify-content:center;
+  }
+  .headIcon>div{
+    
+    margin-left:10px;
+  }
+  
   </style>
   </head>
   <body>
       <div class="aval"> Currently available in Mumbai | Same day </div>
       <div class="main_bar">
+      <div class="header">
                <div class="dropdown"> SHOP^
                 <div class="dropdown-content">
-                  <a href="#">ALL FRUITS</a>
-                  <a href="#">FRESS CUTS</a>
-                  <a href="#">FRESH COMBOS</a>
-                  <a href="#">GIFT BY KIMAYE</a>
-                  <a href="#">COMUNITY BYING</a>
-                  <a href="#">FRUTS S</a>
-                  <a href="#">REFUND AND REPLACEMENT</a>
+                  <a>ALL FRUITS</a>
+                  <a>FRESS CUTS</a>
+                  <a>FRESH COMBOS</a>
+                  <a>GIFT BY KIMAYE</a>
+                  <a>COMUNITY BYING</a>
+                  <a>FRUTS S</a>
+                  <a>REFUND AND REPLACEMENT</a>
                 </div>
               </div>
               <div class="dropdown"> LEARN^
                 <div class="dropdown-content">
-                  <a href="#">OUR STORY</a>
-                  <a href="#">WHY KIMAYE</a>
-                  <a href="#">TRACEABILITY</a>
-                  <a href="#">BEYOND FRUITS</a>
+                  <a>OUR STORY</a>
+                  <a>WHY KIMAYE</a>
+                  <a>TRACEABILITY</a>
+                  <a>BEYOND FRUITS</a>
                    </div>
               </div>
               <button style="margin-left:25px;border:0px;cursor: pointer;"> GROW</button>
-              
-              <img id="kimiimg" src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/website-logo.png?height=628&pad_color=ececec&v=1596288204&width=1200" alt="img">
-               </div>
+             <img id="kimiimg" src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/website-logo.png?height=628&pad_color=ececec&v=1596288204&width=1200" alt="img">
+            <div class="headIcon">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+            </div>
+            </div>
+            <div class="bottomhead">
+              <div>ALL FRUITS </div>
+              <div>FRESS CUTS </div>
+              <div>FRUITS COMBOS </div>
+              <div>GIFT BY KIMAYE </div>
+            </div>
+            </div>
+
                
     
      <div id="contner"></div>
@@ -168,6 +272,54 @@
            <div>FRUITS COMBOS </div>
            <div>GIFT BY KIMAYE </div>
        </div>  
+       <div id="slide">
+         <div class="wrapper">
+           <figure>
+             <div class="hover-animation">
+             <img class="slideimg2" src="https://cdn.shopify.com/s/files/1/0449/5225/6667/products/2_1b3ed574-7a92-4364-85ef-7525411ecd26-min.progressive.jpg?v=1614324760" alt="image"/>
+           <img class="slideimg1 slideimg" src="https://cdn.shopify.com/s/files/1/0449/5225/6667/products/1_3311b3de-1a38-4175-8e8c-ac9577ec85df-min.progressive.jpg?v=1614324760" alt="image"/>
+           </div>
+          </figure>
+           <p class="slidename"> Kimaye Bananas Roboust(5-6pcs)</p>
+           <p class="slideprice">₹ 39</p>
+          </div>
+          <div class="wrapper">
+            <figure>
+              <div class="hover-animation">
+              <img class="slideimg2" src="https://cdn.shopify.com/s/files/1/0449/5225/6667/products/2_dc6a321c-3ae4-45fb-874f-c5937d9c4c48-min.progressive.jpg?v=1614327564" alt="image"/>
+          <img class="slideimg1 slideimg" src="https://cdn.shopify.com/s/files/1/0449/5225/6667/products/d109e625-23d6-49b2-ad4f-433ac292cece.png?v=1613364161" alt="image"/>
+        </div>
+      </figure>
+          <p class="slidename"> Kimaye Washington Apples(Pack of 3 &4)</p>
+          <p class="slideprice">₹ 154 – ₹ 297</p>
+         </div>
+
+         <div class="wrapper">
+          <figure>
+            <div class="hover-animation">
+            <img class="slideimg2" src="https://cdn.shopify.com/s/files/1/0449/5225/6667/products/2_4fef1fe4-8a60-4abc-ae2f-9ac5ce82d2e7-min.progressive.jpg?v=1614325208" alt="image"/>
+          <img class="slideimg1 slideimg" src="https://cdn.shopify.com/s/files/1/0449/5225/6667/products/5e8b2ee6-ce8e-42e9-959f-d43c544f586a.png?v=1616326949" alt="image"/>
+        </div>
+      </figure>
+          <p class="slidename"> Kimaye Blackbarries(125g)</p>
+          <p class="slideprice">₹ 358</p>
+         </div>
+
+         
+         <div class="wrapper">
+          <figure>
+            <div class="hover-animation">
+            <img class="slideimg2" src="https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Optimized-3-carousel-funfact-FlameSeedless_bf77886e-5bd8-48cc-9c52-4765d3b1c1ed-min.progressive.jpg?v=1614328348" alt="image"/>
+          <img class="slideimg1 slideimg" src="https://cdn.shopify.com/s/files/1/0449/5225/6667/products/47dfb7d1-d8d3-4c96-bda9-7dc85dfdec51.png?v=1613364164" alt="image"/>
+        </div>
+      </figure>
+         
+          <p class="slidename"> pomegranate seeds(Arials Cups) 125gm</p>
+          <p class="slideprice">₹ 55</p>
+         </div>
+
+       </div>
+
     
  
  
