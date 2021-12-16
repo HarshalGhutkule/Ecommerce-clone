@@ -1,28 +1,57 @@
+@font-face {
+  font-family: "Bitterbrush";
+  src: url(font/Bitterbrush-DEMO.otf);
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cd171f;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #98cb4c;
+  border-radius: 10px;
+}
+
+::selection {
+  color: #cd171f;
+  background: #98cb4c;
+}
+
 * {
   box-sizing: border-box;
 }
 
 h1 {
-    font-family: 'Caveat Brush', cursive;
+  font-family: "Bitterbrush";
+  font-weight: 200;
 }
 
 /* main cointainer styling */
 
 .container {
-  height: 5135px;
+  height: 5541px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 35px 70px 700px 170px 1300px 800px 170px 500px 580px 550px 260px;
+  grid-template-rows: 35px 70px 700px 200px 1350px 33px 800px 40px 250px 500px 33px 580px 40px 650px 260px;
   grid-template-areas:
     "a a a a a a a a a a a a"
     "b b b b b b b b b b b b"
     "c c c c c c c c c c c c"
     "d d d d d d d d d d d d"
     "e e e e e e e e e e e e"
+    "x x x x x x x x x x x x"
     "f f f f f f f f f f f f"
+    "z z z z z z z z z z z z"
     "g g g g g g g g g g g g"
     "h h h h h h h h h h h h"
+    "o o o o o o o o o o o o"
     "i i i i i i i i i i i i"
+    "q q q q q q q q q q q q"
     "j j j j j j j j j j j j"
     "k k k k k k k k k k k k";
 }
@@ -92,7 +121,7 @@ h1 {
   font-family: "PT Sans", Arial, Helvetica, sans-serif;
 }
 
-#grow, .navbar>div:nth-child(1)+img {
+#grow,.navbar > div:nth-child(1) + img {
   cursor: pointer;
 }
 
@@ -114,6 +143,34 @@ h1 {
 i {
   font-size: 20px;
   cursor: pointer;
+}
+
+form {
+  display: none;
+  position: relative;
+  top: 58px; 
+  left: 10px;
+  background-color: #f7f7f7;
+  z-index: 1;
+  padding: 20px;
+  width: 295px;
+  box-shadow: 0 0 2px rgb(0 0 0 / 10%);
+}
+
+input[type="text"]{
+  height: 35px;
+}
+
+input[type="submit"]{
+  height: 35px;
+  background-color: #98cb4c;
+  color: white;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.searchbar:hover form {
+  display: block;
 }
 
 /* styling for slider */
@@ -138,54 +195,54 @@ i {
 }
 
 #box > div > h1 {
-    color: white;
-    font-size: 60px;
-    line-height: 0%;
+  color: white;
+  font-size: 60px;
+  line-height: 0%;
 }
 
 #box > div > h2::before {
-    content: '';
-    display: block;
-    position: absolute;
-    right: -0.25em;
-    top: -0.35em;
-    width: 1em;
-    height: 0.78em;
-    background: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/front-leaf.png?v=1599479875) no-repeat right top transparent;
-    background-size: contain;
-    z-index: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  right: -0.25em;
+  top: -0.35em;
+  width: 1em;
+  height: 0.78em;
+  background: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/front-leaf.png?v=1599479875) no-repeat right top transparent;
+  background-size: contain;
 }
 
 #box > div > h2::after {
-    content: '';
-    display: block;
-    position: absolute;
-    right: -0.65em;
-    top: -0.25em;
-    width: 1em;
-    height: 0.78em;
-    background: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/front-leaf.png?v=1599479875) no-repeat right top transparent;
-    background-size: contain;
-    transform: rotate(70deg);
+  content: "";
+  display: block;
+  position: absolute;
+  right: -0.65em;
+  top: -0.25em;
+  width: 1em;
+  height: 0.78em;
+  background: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/front-leaf.png?v=1599479875) no-repeat right top transparent;
+  background-size: contain;
+  transform: rotate(70deg);
 }
 
 #box > div > h2 {
-    display: inline;
-    color: white;
-    font-size: 60px;
-    font-family: 'Caveat Brush', 'cursive';
-    position: relative;
-    padding: 0 0.5em 0 0.25em;
-    margin-left: -0.25em;
-    background: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/red-ribbon.png?v=1599479875) no-repeat center center transparent;
-    background-size: 100% 100%;
-    line-height: 1.2;
- }
+  display: inline;
+  color: white;
+  font-size: 60px;
+  font-family: "Bitterbrush";
+  font-weight: 200;
+  position: relative;
+  padding: 0 0.5em 0 0.25em;
+  margin-left: -0.25em;
+  background: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/red-ribbon.png?v=1599479875) no-repeat center center transparent;
+  background-size: 100% 100%;
+  line-height: 1.2;
+}
 
 #box > div > p {
-    color: #d7d5d1;
-    font-family: "PT Sans", sans-serif;
-    font-size: 21px;
+  color: #d7d5d1;
+  font-family: "PT Sans", sans-serif;
+  font-size: 21px;
 }
 
 #box ~ button {
@@ -200,14 +257,14 @@ i {
 }
 
 #shop {
-    padding: 1.5% 3%;
-    border-radius: 20px;
-    background-color: #98cb4c;
-    color: white;
-    cursor: pointer;
-    border: none;
-    font-size: 15px;
-  }
+  padding: 1.5% 3%;
+  border-radius: 20px;
+  background-color: #98cb4c;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+}
 
 .next {
   margin-left: 97%;
@@ -218,8 +275,30 @@ i {
 .recommends {
   grid-area: d;
   border: 1px solid red;
-  background-color: #edede8;
+  background-image: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/jazz-bg-texture-min_1.jpg?v=1616673456);
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
+}
+
+.recommends > h1 {
+  padding-top: 3%;
+  font-size: 50px;
+  line-height: 50%;
+}
+
+.recommends>h1::before {
+  content: '';
+  position: absolute;
+  background-image: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/t/4/assets/recom-leaf.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: transparent;
+  background-size: contain;
+  left: 10em;
+  top: 17em;
+  width: 1.15em;
+  height: 0.63em;
 }
 
 .recommends > p {
@@ -232,7 +311,11 @@ i {
 .recProducts {
   grid-area: e;
   border: 1px solid red;
-  background-color: #edede8;
+  background-image: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/jazz-bg-texture-min_1.jpg?v=1616673456);
+  background-position: center top;
+  background-color: transparent;
+  background-size: 100% auto;
+  background-repeat: repeat-y;
 }
 
 .recProducts > div {
@@ -244,7 +327,8 @@ i {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 5%;
+  grid-column-gap: 5%;
+  grid-row-gap: 0%;
 }
 
 .recProducts > div > div > div:nth-child(1) {
@@ -274,6 +358,11 @@ i {
   font-weight: 300;
 }
 
+.recProducts > div > div > div:nth-child(2) > h1 {
+  font-size: 40px;
+  line-height: 50%;
+}
+
 p + button {
   padding: 2.5% 7%;
   border-radius: 20px;
@@ -281,6 +370,21 @@ p + button {
   color: white;
   cursor: pointer;
   border: none;
+}
+
+/* styling for know more before texture */
+
+#x {
+  grid-area: x;
+  background-image: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/kimahi-top-cut.png?v=1599122573);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: transparent;
+  background-size: cover;
+  top: 0;
+  height: 2.1em;
+  opacity: 0.75;
+  background-color: #f8f8f8;
 }
 
 /* styling for know more option */
@@ -305,16 +409,89 @@ p + button {
 }
 
 #kmbox > div:nth-child(2) {
-  padding-top: 5%;
-  padding-left: 5%;
+  padding: 3% 7% 0% 3%;
   border: 1px solid red;
   width: 55%;
 }
 
 #kmbox > div > img {
-  padding-left: 20%;
+  padding-left: 17%;
   height: 700px;
-  width: 580px;
+  width: 560px;
+}
+
+#kmbox > div:nth-child(2) > h1 {
+  font-size: 55px;
+  color: white;
+}
+
+span {
+  color: #ed2831;
+}
+
+#kmbox div:nth-child(2) p {
+  font-family: "PT Sans", sans-serif;
+  line-height: 26px;
+  font-size: 18px;
+  color: white;
+}
+
+#kmbox div:nth-child(2) div {
+  background: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/white-ribbon.png?v=1599563566) no-repeat left center transparent;
+  background-size: 100% 100%;
+  padding-top: 2.5%;
+  height: 60px;
+  width: 350px;
+}
+
+#kimaye{
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  padding-left: 5%;
+  font-weight: 700;
+  color: black;
+}
+
+#all {
+  font-family: "PT Sans", 'Arial', 'Helvetica', 'sans-serif';
+  font-size: 25px;
+  font-weight: 500;
+  color: black;
+}
+
+#kmbutton {
+  margin-top: 7%;
+  padding: 2.5% 5%;
+  background-color: white;
+  color: black;
+  border: transparent;
+  border-radius: 25px;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+#kmbutton:hover {
+  background-color: rgb(70, 70, 70);
+  color: white;
+  transition: 0.5s all ease-in-out;
+  cursor: pointer;
+}
+
+
+/* styling for know more after texture */
+
+#z {
+  grid-area: z;
+  background-image: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/kimahi-bottom-cut.png?v=1599122574);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: transparent;
+  background-size: cover;
+  bottom: 0;
+  height: 2.1em;
+  width: 100%;
+  opacity: 0.75;
+  background-color: #f8f8f8;
 }
 
 /* styling for our journey text*/
@@ -326,6 +503,17 @@ p + button {
   background-color: #edede8;
 }
 
+.ourJourney h1 {
+  padding-top: 2%;
+  font-size: 55px;
+  font-weight: 300;
+}
+
+.ourJourney p {
+  font-size: 25px;
+  font-family: "PT Sans", sans-serif;
+}
+
 /* styling for our journey info*/
 
 .journeyinfo {
@@ -335,29 +523,105 @@ p + button {
   display: grid;
   grid-template-columns: 10% 88%;
   grid-column-gap: 2%;
-  grid-template-areas: 
-  "a b"
-  ;
+  grid-template-areas: "a b";
 }
 
-.journeyinfo>div:nth-child(1) {
-    border: 1px solid red;
+.journeyinfo > div:nth-child(1) {
+  border: 1px solid red;
 }
 
 #upslider {
-    /* display: flex;
-    justify-content: space-around;
-    align-items: center; */
-    border: 1px solid red;
-    overflow: hidden;
+  border: 1px solid red;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  cursor: pointer;
 }
 
-#upslider figure {
-    position: relative;
-    width: 1000%;
-    margin: 0;
-    left: 0;
-    animation: 20s upslider infinite;
+#upslider>div {
+  border: 1px solid red;
+  display: flex;
+  height: 100%;
+  width: 90%;
+  justify-content: space-around;
+}
+
+.textinfo {
+  height: 50%;
+  width: 30%;
+  border: 1px solid red;
+  margin-left: 6%;
+}
+
+.grown {
+  border: 1px solid red;
+  position: relative;
+  width: 60%;
+  margin-left: 40%;
+  height: 40%;
+}
+
+.we {
+  border: 1px solid red;
+  width: 80%;
+  margin-left: 40%;
+  height: 45%;
+}
+
+.we>p {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 300;
+  color: #222222;
+}
+
+.grown>h4 {
+  font-family: "PT Sans", sans-serif;
+  color: #222222;
+  font-size: 25px;
+  line-height: 33px;
+  font-weight: 500;
+}
+
+.imageinfo {
+  margin-top: 5%;
+  height: 80%;
+  width: 50%;
+  border: 1px solid red;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.imageinfo img {
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+}
+
+#num {
+  content: '';
+  position: initial;
+  font-family: "PT Sans",sans-serif;
+  font-size: 6.58em;
+  font-weight: 900;
+  letter-spacing: .02em;
+  line-height: 1.18;
+  color: #a0bf7f;
+  opacity: .5;
+}
+
+/* styling for jazz it up before texture */
+
+#o {
+  grid-area: o;
+  background-image: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/blog-top-cut.png?v=1599102918);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: transparent;
+  background-size: cover;
+  top: 0;
+  height: 2.1em;
+  opacity: 0.75;
+  background-color: #f8f8f8;
 }
 
 /* styling for jazz it up*/
@@ -368,66 +632,91 @@ p + button {
   background-color: #eccd65;
 }
 
-.jazzitUp>div:nth-child(1) {
-    text-align: center;
-    height: 90px;
+.jazzitUp > div:nth-child(1) {
+  text-align: center;
+  height: 90px;
+}
+
+.jazzitUp > div:nth-child(1) h1 {
+  font-size: 50px;
 }
 
 .slider2 {
-    width: 85%;
-    margin: auto;
-    height: 370px;
-    display: flex;
-    justify-content: space-around;
-    border: 1px solid red;
+  width: 85%;
+  margin: auto;
+  height: 370px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid red;
 }
 
-.slider2>div:nth-child(1) {
-    width: 550px;
-    border: 1px solid red;
-    background-image: url("https://cdn.shopify.com/s/files/1/0449/5225/6667/files/dragon-fruit--white-promise.png?v=1632470740");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 30px;
+.slider2 > div:nth-child(1) {
+  width: 550px;
+  border: 1px solid red;
+  background-image: url("https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/AdobeStock_334275008-2-opt2-1900px_720x.jpg?v=1627119119");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.65) 0px -130px 36px -28px inset;
 }
 
-.slider2>div:nth-child(1)>h2, .slider2>div:nth-child(2)>h2 {
-    margin: 45% 2% 0% 2%;
-    color: white;
-    line-height: 130%;
+.slider2 div h2 {
+  margin: 45% 2% 0% 2%;
+  color: white;
+  line-height: 130%;
+  font-family: "PT Sans", "MS Sans Serif", Geneva, sans-serif;
 }
 
-.slider2>div:nth-child(1)>p, .slider2>div:nth-child(2)>p {
-    margin: 0% 2% 0% 2%;
-    color: white;
-    line-height: 120%;
+.slider2 div p{
+  margin: 0% 2% 0% 2%;
+  color: white;
+  line-height: 120%;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
-.slider2>div:nth-child(2) {
-    width: 550px;
-    border: 1px solid red;
-    background-image: url("https://cdn.shopify.com/s/files/1/0449/5225/6667/files/breakfast.jpg?v=1606108190");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 30px;
+.slider2 > div:nth-child(2) {
+  width: 550px;
+  border: 1px solid red;
+  background-image: url("https://cdn.shopify.com/s/files/1/0449/5225/6667/articles/AdobeStock_201343750_copy__66kb-1000px_720x.jpg?v=1626676701");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.65) 0px -130px 36px -28px inset;
 }
 
-.slider2>button {
-    border: none;
-    color: black;
-    position: absolute;
-    top: 600%;
-    font-size: 40px;
-    font-weight: 100;
-    background-color: transparent;
-    cursor: pointer;
+.slider2 > button {
+  border: none;
+  color: black;
+  position: absolute;
+  top: 655%;
+  font-size: 40px;
+  font-weight: 100;
+  background-color: transparent;
+  cursor: pointer;
 }
-  
+
 .prev1 {
-    margin-left: -85%;
+  margin-left: -85%;
 }
 .next1 {
-    margin-left: 85%;
+  margin-left: 85%;
+}
+
+/* styling for jazz it up after texture */
+
+#q {
+  grid-area: q;
+  background-image: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/blog-bottom-cut.png?v=1599102919);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: transparent;
+  background-size: cover;
+  bottom: 0;
+  height: 2.1em;
+  width: 100%;
+  opacity: 0.75;
+  background-color: #f8f8f8;
 }
 
 /* styling for psst*/
@@ -440,7 +729,7 @@ p + button {
 
 .psst > div:nth-child(1) {
   padding-top: 1%;
-  height: 150px;
+  height: 250px;
   width: 80%;
   margin: auto;
   text-align: center;
@@ -461,6 +750,23 @@ p + button {
   width: 100%;
   border-radius: 20px;
   position: relative;
+}
+
+.psst > div:nth-child(2) > div > img:hover {
+  opacity: 0.75;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.psst div h1 {
+  font-size: 55px;
+  margin-top: 7%;
+  line-height: 50%;
+}
+
+.psst div p {
+  font-size: 25px;
+  font-family: "PT Sans", sans-serif;
 }
 
 /* styling for footer*/
