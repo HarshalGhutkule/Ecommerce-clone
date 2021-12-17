@@ -1,400 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-
-.aval{
-    height:35px;
-    width:100%;
-    background-color:#471;
-    color:white;
-    text-align:center;
-    font-size:20px;
-    margin-bottom:0px;
-}
-
-#contner{
-    width:100%;
-    margin:auto;
-    background-color:#eef;
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap:20px;
-    justify-content:space-between;
-    
-
-}
-#obj>div{
-    height:300px;
-   
-    background-color:#eef;
-}
-.main_bar{
-    height:200px;
-    background-color:#eef;
-    width:100%;  
-}
-.main_bar .dropdown{
-  cursor:pointer
-}
-.header{
-  height:20%;
-  border:1px solid black;
-  margin-top:0px;
-  padding:10px;
-}
-.header>div{
-  margin-left:20px;
-}
-.bottomhead{
-  height:45%;
-  border:1px solid green;
-  display:flex;
-  justify-content:center;
-}
-.bottomhead>div{
-  margin-left:20px;
-  cursor:pointer;
-}
-.bottomhead>div:hover{
-  text-decoration:underline;
-}
-
-
-.img{
-    height:300px;
-    width:100%;
-    border-radius:20px;
-    overflow: hidden;
-    margin: 0 auto;
-    transition: 0.5s all ease-in-out;
-}
-
-.img:hover{
-    transform: scale(1.1);
-}
-
-.nameoff{
-    font-size:15px;
-    font-weight:bold;
-    text-align:center;
-}
-
-.prc{
-    font-size:25px;
-    color:red;
-    text-align:center;
-}
-.dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #ddd;color:green;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #3e8e41;
-  }
-  #kimiimg{
-      display:block;
-      height:95%;
-      width:10%;
-      margin-left:auto;
-      margin-right:auto;
-      margin-top:-20px;   
-  }
-  .bottommenu{
-    display:flex;
-    width:95%;
-    margin:auto; 
-    padding:10px;
-    background-color:#eef;
-  }
-  .bottommenu>div{
-      font-size:15px;
-      margin-left:auto;
-      cursor: pointer;
-  }
-  .bottommenu>div:hover{
-      text-decoration:underline;
-  }
-  #slide{
-    height:150px;
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr 1fr;
-    grid-gap:20px;
-  }
-  #slide>div{
-     margin-top:30px;
-     height:100%;
-     
-  }
-  .slideimg{
-    height:50%;
-    width:300%;
-    border-radius:20px;
-    cursor:pointer;
-    overflow: hidden;
-    margin: 0 auto;
-    transition: 0.5s all ease-in-out;
-  }
- 
-  .slidename{
-    font-size:15px;
-    text-align:center;
-    cursor:pointer;
-    padding-top:20px;
-  }
-  .slideprice{
-    font-size:20px;
-    color:red;
-    text-align:center;
-    cursor:pointer;
-
-  }
-  
-  .hover-animation {
-    position: relative;
-    height: 280px;
-    width: 100%;
-    color: #fff;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
-    border-radius:20px;
-    
-  }
-  .hover-animation img {
-    position: absolute;
-    border-radius:20px;
-    left: 0;
-    width: 100%;
-    height: 280px;
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -ms-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
-  }
-  .hover-animation img.slideimg1:hover{
-    opacity:0;
-    cursor: pointer;
-    
-  }
-  .slideimg2{
-    transform: scale(1.2);
-  }
-  .headIcon{
-  width:20%;
-  height:30px;
-  position:absolute;
-  right:15px;
-  border:1px solid blue;
-  display:flex;
-  margin-top:-30px;
-  justify-content:center;
-  }
-  .headIcon>div{
-    
-    margin-left:20px;
-    cursor:pointer;
-  }
-  .cart{
-    height:30px;
-    background-color:blue;
-    color:white;
-    padding-top:0px;
-    border-radius:10px;
-    margin-left:40%;
-    margin-top:2%;
-  }
-  url("http://digital.bnint.com/filelib/s9/photos/white_wood_4500x3000_lo_res.jpg");
-}
-
-.carousel {
-    position: relative;
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
-    margin-top: 26px;
-    
-}
-
-.carousel-inner {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height:400px;
-    border:1px solid red;
-    margin-top:20px;
-}
-
-.carousel-open:checked + .carousel-item {
-    position: static;
-    opacity: 100;
-}
-
-.carousel-item {
-    position: absolute;
-    opacity: 0;
-    -webkit-transition: opacity 0.6s ease-out;
-    transition: opacity 0.6s ease-out;
-    display:flex
-}
-.carousel-item >div{
-  height:300px;
-  width:24%;
-  margin-left:25px;
-  border:1px solid yellow;
-}
-
-
-
-.carousel-control {
-    background: rgba(0, 0, 0, 0.28);
-    border-radius: 50%;
-    color: #fff;
-    cursor: pointer;
-    display: none;
-    font-size: 40px;
-    height: 40px;
-    line-height: 35px;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    cursor: pointer;
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    text-align: center;
-    width: 40px;
-    z-index: 10;
-}
-
-.carousel-control.prev {
-    left: 2%;
-}
-
-.carousel-control.next {
-    right: 2%;
-}
-
-.carousel-control:hover {
-    background: rgba(0, 0, 0, 0.8);
-    color: #aaaaaa;
-}
-
-#carousel-1:checked ~ .control-1,
-#carousel-2:checked ~ .control-2,
-#carousel-3:checked ~ .control-3 {
-    display: block;
-}
-
-.carousel-indicators {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    bottom: 2%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 10;
-}
-
-.carousel-indicators li {
-    display: inline-block;
-    margin: 0 5px;
-}
-
-.carousel-bullet {
-    color: #fff;
-    cursor: pointer;
-    display: block;
-    font-size: 35px;
-}
-
-.carousel-bullet:hover {
-    color: #aaaaaa;
-}
-
-#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-    color:black;
-}
-
-
-  
-  </style>
+    <link rel="stylesheet" href="ProductPage.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
   </head>
   <body>
-      <div class="aval"> Currently available in Mumbai | Same day </div>
-      <div class="main_bar">
-      <div class="header">
-               <div class="dropdown"> SHOP^
+    <div class="aval"> Currently available in Mumbai | Same day </div>
+      <!-- navigation bar -->
+
+      <div class="navbar">
+        <div>
+            <div class="dropdown">SHOP<i class="fal fa-angle-down"></i>
                 <div class="dropdown-content">
-                  <a class="page_ref" >ALL FRUITS</a>
-                  <a>FRESS CUTS</a>
-                  <a>FRESH COMBOS</a>
-                  <a>GIFT BY KIMAYE</a>
-                  <a>COMUNITY BYING</a>
-                  <a>FRUTS S</a>
-                  <a>REFUND AND REPLACEMENT</a>
+                    <a href="#">ALL FRUITS</a>
+                    <a href="#">FRESH CUTS</a>
+                    <a href="#">FRUITS COMBOS</a>
+                    <a href="#">GIFTS BY KIMAYE</a>
+                    <a href="#">COMMUNITY BUYING</a>
+                    <a href="#">FRUITS X SUBSCRIPTION</a>
+                    <a href="#">REFUND AND REPLACEMENT</a>
                 </div>
-              </div>
-              <div class="dropdown"> LEARN^
+            </div>
+            <div class="dropdown">LEARN<i class="fal fa-angle-down"></i>
                 <div class="dropdown-content">
-                  <a>OUR STORY</a>
-                  <a>WHY KIMAYE</a>
-                  <a>TRACEABILITY</a>
-                  <a>BEYOND FRUITS</a>
-                   </div>
-              </div>
-              <button style="margin-left:25px;border:0px;cursor: pointer;"> GROW</button>
-             <img id="kimiimg" src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/website-logo.png?height=628&pad_color=ececec&v=1596288204&width=1200" alt="img">
-            <div class="headIcon">
-              <div><i class="fa fa-search" style="font-size:24px"></i></div>
-              <div><i class="fa fa-user-o" style="font-size:24px"></i></div>
-              <div><i class="fa fa-shopping-cart" style="font-size:24px"></i></div>
+                    <a href="#">OUR STORY</a>
+                    <a href="#">WHY KIMAYE</a>
+                    <a href="#">TRACEABILITY</a>
+                    <a href="#">BEYOND FRUITS</a>
+                </div>
             </div>
+            <div>
+                <p id="grow">GROW</p>
             </div>
+        </div>
+        <img src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/website-logo_400x.png?v=1596288204" alt="kimaye logo" height="35px" width="135px">
+        <div id="accountinfo">
+            <i class="fal fa-search searchbar">
+                <form>
+                    <i class="fal fa-times hidebar"></i>
+                    <input class="typeany" type="text" placeholder="Search for products">
+                    <input type="submit" value="SEARCH">
+                </form>
+            </i>
+            <i class="fal fa-user"></i>
+            <i class="fal fa-shopping-bag"></i>
+        </div>
+    </div>
+      <div class="main_bar">
             <div class="bottomhead">
               <div>ALL FRUITS </div>
               <div>FRESS CUTS </div>
               <div>FRUITS COMBOS </div>
               <div>GIFT BY KIMAYE </div>
             </div>
-            </div>
+      </div>
 
-               
-    
      <div id="contner">
-      
-
+      <!-- taken data from js -->
      </div>
-       <div class="bottommenu">
+       <div class="bottomhead">
            <div>ALL FRUITS </div>
            <div>FRESS CUTS </div>
            <div>FRUITS COMBOS </div>
@@ -525,7 +196,54 @@
             </ol>
         </div>
     </div>
-       
+    <!-- footer -->
+    <div class="footer">
+      <div>
+          <div>
+              <div>
+                  <ul>
+                      <li type="none">
+                          <strong>FAQ's</strong>
+                      </li>
+                      <li type="none">
+                          <strong>Contact Us</strong>
+                      </li>
+                      <li type="none">
+                          <strong>Shipping & Return Policy</strong>
+                      </li>
+                      <li type="none">
+                          <strong>Terms & Conditions</strong>
+                      </li>
+                      <li type="none">
+                          <strong>Privacy Policy</strong>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <ul>
+                      <li type="none">Follow us on</li>
+                  </ul>
+                  <ul id="logo">
+                      <li type="none">
+                          <img src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/fb-icon.png?v=1599571756" alt="facebook logo">
+                      </li>
+                      <li type="none">
+                          <img src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/insta-icon.png?v=1599571756" alt="instagram logo">
+                      </li>
+                      <li type="none">
+                          <img src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/twitter-icon.png?v=1599571756" alt="twitter logo">
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <hr color="#69824e">
+          <div>
+              <p id="copyright">Copyright©2021. All Rights Reserved</p>
+              <img src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/ting.png?v=1599565040" alt="logo" height="20px">
+          </div>
+      </div>
+  </div>
+</div>
 
     
  
@@ -533,210 +251,6 @@
  
   </body>
 </html>
-<script>
-    var data = [
-    {
-      
-      name: "Kimaye Cherries(Imported) (Pack of 125g, 250g & 500g)",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/cherry-imported-2A.progressive.jpg?v=1629455322",
-      price: "₹ 359 – ₹ 1,399",
-      cart:"Add to CArd"
-     
-     
-    },
-    {
-      
-      name: "Kimaye Guava (Pack of 3 & 6)" ,
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Copy_of_ThaiGuava_Isolated.png?v=1639203167",
-      price: "₹ 60 – ₹ 109",
-      cart:"Add to CArd"
-    },
-    {
-      
-      name: "Kimaye Avocado Imported (1pc ≈ 250g)",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Avocado.progressive.jpg?v=1622045722",
-      price: "₹ 339",
-      cart:"Add to CArd"
-    },
-    {
-      
-      name: "Kimaye Imported Oranges (Pack of 3 & 6)",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/a0cfceb5-76a4-4994-9d37-978c6dc3b309.png?v=1611811512",
-      price: "₹ 140",
-      cart:"Add to CArd"
-
-    },
-    {
+<script src="ProductPage.js">
     
-      name: "Kimaye Nagpuri Santra (2 pc & 4 pc )",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Nagpuri-santra-cover_dfe991ef-cd37-45a4-94f7-b3225779ab6f_360x.jpg?v=1634627098",
-      price: "₹ 59 – ₹ 112",
-      cart:"Add to CArd"
-    },
-    {
-    
-      name: "Kimaye Plum (5-6 pcs ≈ 450 g to 500 g)",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Picture3_360x.jpg?v=1636633326",
-      price: "₹ 219",
-      cart:"Add to CArd"
-    },
-    {
-    
-      name: "Kimaye Strawberries (Pack of 200 g & 400 g)",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/c54118d4-fe2a-4805-aa25-777c029932ee_360x.png?v=1614327346",
-      price: "₹ 249 – ₹ 479",
-      cart:"Add to CArd"
-    },
-    {
-    
-      name: "Kimaye Berry Combo",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/5c874170-4b51-4c5c-839d-57f4177e3034-min_360x.png?v=1614324976",
-      price: "₹ 577 – ₹ 795",
-      cart:"Add to CArd"
-    },
-    {
-    
-      name: "Kimaye Avocado Imported (1pc ≈ 250g)",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Avocado_360x.jpg?v=1622045722",
-      price: "₹ 339",
-      cart:"Add to CArd"
-    },
-    {
-    
-      name: "Kimaye Muskmelon (1 pc)",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Muskmelon-cover_360x.jpg?v=1633763200",
-      price: "₹ 99",
-      cart:"Add to CArd"
-    },
-    {
-    
-      name: "Kimaye Dragon Fruit (1 pc)",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/dragon-fruit--white-cover_360x.jpg?v=1632470660",
-      price: "₹ 127",
-      cart:"Add to CArd"
-    },
-    {
-    
-      name: "Kimaye Washington Apples (Pack of 2 & 4)",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/d109e625-23d6-49b2-ad4f-433ac292cece_360x.png?v=1613364161",
-      price: "₹ 154 – ₹ 297",
-      cart:"Add to CArd"
-    },
-
-    {
-    
-      name: "Kimaye Blueberries (125g)",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/5e8b2ee6-ce8e-42e9-959f-d43c544f586a_360x.png?v=1616326949",
-      price: "₹ 358",
-      cart:"Add to CArd"
-    },
-    {
-    
-      name: "Kimaye Kinnaur Apples (Pack of 3 & 6)",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Kinnaur-Apples-cover_360x.jpg?v=1634226790",
-      price: "₹ 125 – ₹ 239",
-      cart:"Add to CArd"
-    },
-    {
-    
-      name: "Kimaye Golden Kiwis (3 pcs ≈ 300 g)",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/golden-kiwi-cover_360x.jpg?v=1625147312",
-      price: "₹ 249",
-      cart:"Add to CArd"
-    },
-    {
-    
-      name: "Kimaye Mini Oranges (6 pcs) ",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Mini-Oranges-cover_360x.jpg?v=1631890350",
-      price: "₹ 163",
-      cart:"Add to CArd"
-    },
-
-    {
-    
-      name: "Red Globe Imported (400g)",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/bd07b8e7-3643-4a98-996e-c85fd7d133a8_360x.png?v=1614765886",
-      price: "₹ 220",
-      cart:"Add to CArd"
-    },
-    {
-    
-      name: "Kimaye Thai Guava (1 pc ≈ 0.4-0.5 kg)",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/CopyofGuava_Main_Clean_360x.png?v=1606828311",
-      price: "₹ 63",
-      cart:"Add to CArd",
-    },
-    {
-    
-      name: "Kimaye Bananas Yelakki (Pack of 250g, 500g & 1kg )",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Yelakki-banana-cover_bc79dea2-08f8-404b-99f5-327a91213fbb_360x.jpg?v=1627026370",
-      price: "₹ 35 – ₹ 113",
-      cart:"Add to CArd"
-    },
-    {
-    
-      name: "Kimaye Papaya (1 pc )",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Papaya-cover_360x.jpg?v=1638875170",
-      price: "₹ 69",
-      cart:"Add to CArd"
-
-    },
-    {
-    
-      name: "Kimaye Mosambi (Pack of 3 & 6)",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/CopyofMosambi_Main_FixedShadows-min_360x.png?v=1614327057",
-      price: "₹ 55 – ₹ 99",
-      cart:"Add to CArd"
-    },
-    {
-    
-      name: "",
-      image: "",
-      price: "₹ 219",
-      cart:"Add to CArd"
-    },
-    {
-    
-      name: "",
-      image: "",
-      price: "₹ 219",
-      cart:"Add to CArd"
-    },
-
-  
-    
-
-    
-  ];
-  data.map(function(elem){
-    var firstDiv=document.createElement("div");
-    firstDiv.setAttribute("class","main")
-
-    var img=document.createElement("img");
-    img.setAttribute("class","img")
-    img.setAttribute("src",elem.image);
-    var h4=document.createElement("p");
-    h4.setAttribute("class","nameoff")
-    h4.textContent=elem.name;
-    var para=document.createElement("p");
-    
-    para.setAttribute("class","prc")
-    para.textContent=elem.price;
-
-    var card=document.createElement("button");
-    card.setAttribute("class","cart")
-    card.textContent=elem.cart;
-   
-    firstDiv.append(img,h4,para,card);
-    document.getElementById("contner").append(firstDiv);
-});
-document.querySelector(".cart").addEventListener("click",function(){
-  localStorage.setItem("ProductItem",JSON.stringify())
-});
-document.querySelector(".fa-shopping-cart").addEventListener("click",function(){
-window.location.href="cat.html"
-});
-document.querySelector(".page_ref").addEventListener("click",function(){
-  window.location.href="myunitproject.html"
-  });    
 </script>

@@ -14,7 +14,7 @@ function showproduct(event){
     event.preventDefault();
     var searchInput = document.querySelector(".typeany").value;
     if(searchInput == "ALL FRUITS"){
-        window.location.href = "product.html";
+        window.location.href = "ProductPage.html";
     }
 }
 
