@@ -18,6 +18,25 @@ function showproduct(event){
     }
 }
 
+// function for go to home page
+
+document.querySelector(".navbar > div:nth-child(1) + img").addEventListener("click", function(){
+  window.location.href = "landingPage.html";
+})
+
+// function for go to log-in page
+
+document.querySelector(".gotologin").addEventListener("click", function(){
+  window.location.href = "Log-inPage.html";
+})
+
+// function for go to cart page
+
+document.querySelector(".gotocart").addEventListener("click", function(){
+  window.location.href = "CartPage.html";
+})
+
+// function for adding product data on page
 
 var data = [
     {
@@ -222,5 +241,9 @@ var data = [
     document.getElementById("contner").append(firstDiv);
 });
 
+// function for go to cart page
 
+document.querySelector(".img").addEventListener("click", function(){
+  window.location.href = "ProductDetailsPage.html";
+})
 

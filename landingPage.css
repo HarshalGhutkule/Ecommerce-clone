@@ -637,6 +637,7 @@ span {
   height: 370px;
   display: flex;
   justify-content: space-around;
+  cursor: pointer;
 }
 
 .slider2 > div:nth-child(1) {
