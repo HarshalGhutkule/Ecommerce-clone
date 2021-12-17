@@ -1,3 +1,23 @@
+// navbar search dropdown Option
+
+document.querySelector(".searchbar").addEventListener("click", showsearch);
+
+function showsearch(){
+    document.querySelector("form").style.display = "block";
+}
+
+// navbar search SUBMIT button function
+
+document.querySelector("form").addEventListener("submit", showproduct);
+
+function showproduct(event){
+    event.preventDefault();
+    var searchInput = document.querySelector(".typeany").value;
+    if(searchInput == "ALL FRUITS"){
+        window.location.href = "product.html";
+    }
+}
+
 
 // slider function
 
