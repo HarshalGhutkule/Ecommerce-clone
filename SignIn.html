@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    #contner{
+        display:grid;
+        width:80%;
+        margin:auto;
+        grid-template-columns:1fr 1fr;
+        gird-gap:20px;
+        margin-top:50px;
+        background-color:hsl(60,13%,92%);
+       
+      
+    }
+    
+        
+    }
+    .creatacc{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+
+    .acc{
+        display:flex;
+        margin:10px;
+        margin-bottom:0px;
+    }
+    .acc>div{
+        font-size:25px;
+        margin-left:15px;
+        
+    }
+    .inp>input{
+        height:30px;
+        width:400px;
+        margin:12px 20px;
+    }
+    
+    .inp>label{
+        font-size:20px;
+        margin-left:20px ;
+        margin-bottom:5px;
+    }
+    button{
+        height:35px;
+        width:75%;
+        margin-left:20px;
+        margin-top:10px;
+       border:1px solid black;
+       background-color:white;
+       font-size:20px;
+       cursor:pointer;
+    }
+    button:hover{
+        background-color:black;
+        color:white;
+    }
+    .reg{
+        font-size:34px;
+        font-family:MS Sans Serif;
+        text-align:center;
+        line-height:48px;
+        color:#1b1919;
+        font-weight:400;
+    }
+    .sumary{
+        font-size:14px;
+        font-family:arial;
+        text-align:center;
+        line-height:21px;
+        color:#4c4c4c;
+        font-weight:400;
+      
+    }
+    .loginbtn{
+        height:38px;
+        width:25%;
+        margin-left:45%;
+        
+       border:1px solid black;
+       background-color:black;
+       font-size:20px;
+       color:white;
+      
+    }
+    .resetpass{
+        margin-left:20px;
+        margin-bottom:2px;
+         cursor:pointer;
+           
+    }
+    .resetpass:hover{
+        color:green;
+    }
+    .mainb{
+        background-color:hsl(60,13%,92%);
+    }
+    .fb{
+        height:40px;
+        width:79%;
+        margin-left:10px;
+        background-color:#3b5998;
+        color:white;
+        font-size:18px;
+        border-radius:5px;
+        cursor:pointer;
+        
+    }
+    .google{
+        background-color:#dd4b39;
+    }
+}
+.head{
+    height:100px;
+    width:100%;
+    
+    margin-top:20px;
+}
+.myacc{
+    font-family:MS Sans Serif;
+    font-size:36px;
+    color:#ffffff;
+    text-align:center;
+     margin-top:10px;
+}
+.home{
+font-size:14px;
+margin-top:10px;
+
+}
+
+</style>
+
+</head>
+<body class="mainb">
+    <div  style="background-color:#437111;height:100px;";class="head">
+        <div class="myacc">My Account</div>
+        <div>
+            <div></div>
+            <div class="myacc home"> Home/My Account</div>
+        </div>
+    </div>
+    
+<div id="contner">
+    <div class="creatacc">
+        <div class="fb"><p style="padding:10px"> Signin With Facebook</p></div>
+        <div class="fb google"><p style="padding:10px"> Signin With Google</p></div>
+        <form>
+            <div class="acc">
+                <div >
+                    <i class="fa fa-external-link" style="font-size:24px"></i>  
+                </div>
+                <div>Login</div>
+                </div>
+                <div class="inp">
+               
+                <label>Email adress</label><br>
+                <input  id="eml"="email" value=""/><br>
+                <label>Password</label><br>
+                <input id="pass" type="Password" minlength="5" value=""/><br>
+                <p class="resetpass"> *lsot your password</p>
+                <button class="sub">LOGIN</button>
+                </div>
+        </form>
+    </div>
+    <div style="">
+        <p class="reg"> Register</p>
+       
+        <p class="sumary"> Welcome to Kimaye! Help us with a few details before you begin enjoying our<br> safe and tasty fruits.</p>
+        <button class="loginbtn">    REGISTER</button>
+    </div>
+
+
+
+</div>
+</body>
+</html>
+<script>
+    document.querySelector(".loginbtn").addEventListener("click",gonext);
+function gonext(){
+    window.location.href="fristproject_html.html"
+
+}
+</script>
