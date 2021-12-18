@@ -6,24 +6,156 @@ body {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
 }
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  box-shadow: 1px 2px 2px rgb(227, 227, 223);
+
+@font-face {
+  font-family: "Bitterbrush";
+  src: url(font/Bitterbrush-DEMO.otf);
+  font-style: normal;
 }
-.kimaye_logo {
-  background-color: rgb(238, 238, 234);
-  display: flex;
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cd171f;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #98cb4c;
+  border-radius: 10px;
+}
+
+::selection {
+  color: #cd171f;
+  background: #98cb4c;
+}
+
+.available {
+  height: 40px;
+  padding-top: 0.1%;
   align-items: center;
-  justify-content: center;
-  height: 50px;
-  margin-top: 0;
-  z-index: 100;
+  color: white;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  background-color: #437111;
 }
-.kimaye_logo img {
-  height: 30px;
+
+/* Navigation bar styling */
+
+.navbar {
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #eeeeea;
+  z-index: 2;
 }
+
+.navbar > div:nth-child(1) {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown {
+  font-family: "PT Sans", serif;
+  font-size: 17px;
+  height: 100%;
+  margin-top: 18%;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown i {
+  right: -8px;
+  font-size: 18px;
+  color: #bbb;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 43px;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  color: #6d6d6d;
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+}
+
+#grow,.navbar > div:nth-child(1) + img {
+  cursor: pointer;
+}
+
+.dropdown-content a:hover {
+  color: #98cb4c;
+  padding-left: 10%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#accountinfo {
+  width: 150px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+i {
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+#searchform {
+  display: none;
+  position: absolute;
+  top: 70px; 
+  right: 230px;
+  background-color: #f7f7f7;
+  z-index: 1;
+  padding: 20px;
+  width: 335px;
+  box-shadow: 0 0 2px rgb(0 0 0 / 10%);
+}
+
+input[type="text"]{
+  height: 35px;
+}
+
+input[type="submit"]{
+  height: 35px;
+  background-color: #98cb4c;
+  color: white;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.hidebar {
+  display: flex;
+  justify-content: flex-end;
+  line-height: 0%;
+  margin-bottom: 5%;
+}
+
+
 .background:before {
   content: " ";
   display: block;
@@ -99,6 +231,14 @@ a {
   height: 360px;
   width: 360px;
 }
+.main_img:hover {
+  transform: scale(1.6);
+}
+
+#scaleup {
+  overflow: hidden;
+}
+
 .fruit_img::after {
   content: "NEW";
   color: white;
@@ -148,11 +288,10 @@ a {
   line-height: 1.07;
 }
 .text {
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 0.32px;
-  line-height: 1.45;
+  line-height: 26px;
   font-weight: 500;
-  line-height: 1.3;
   letter-spacing: 0.1px;
   font-family: "PT Sans", sans-serif;
   color: #222;
@@ -260,10 +399,20 @@ input[type="number"],
 .plus {
   background-color: #f9f9f9;
   width: 20px;
+  height: 50px;
 }
 .minus:hover,
 .plus:hover {
   background-color: inherit;
+}
+
+.number {
+    width: 30px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    height: 50px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding-top: 16%;
 }
 .add {
   height: 32px;
@@ -305,21 +454,14 @@ input[type="number"],
 }
 .kimaye-promise {
   align-self: center;
-  width: 450px;
+  width: 520px;
 }
 .sub_heading {
   font-size: 40px;
-  font-family: "Gochi Hand", cursive;
+  font-family: "Bitterbrush";
   font-weight: 400;
   line-height: 1.18;
-}
-.img3 {
-  background-image: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/promise-leaves.png?v=1599298370);
-  /* background-repeat: no-repeat; */
-  /* background-position: center center; */
-  background-size: contain;
-  z-index: 10;
-  /* transform: scale(1.42); */
+  font-size: 50px;
 }
 .img3 {
   height: 400px;
@@ -327,14 +469,7 @@ input[type="number"],
   border-radius: 32px;
   box-shadow: 0 0 49px 0 rgb(0 0 0 / 20%);
 }
-/* .back {
-  background: rgba(67, 113, 17, 0.8);
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  position: relative;
-} */
+
 .section_3 {
   background: linear-gradient(
     to bottom,
@@ -353,7 +488,7 @@ input[type="number"],
   position: relative;
 
   margin-top: 80px;
-  height: 460px;
+  height: 560px;
 
   position: relative;
 }
@@ -400,12 +535,16 @@ input[type="number"],
   /* opacity: 10;
   position: relative; */
 }
+
+.sub-heading2 {
+  width: 320px;
+}
 .bg {
   background: url(https://cdn.shopify.com/s/files/1/0449/5225/6667/files/background.png?v=1599288351)
     no-repeat center center transparent;
   background-size: 100% 100%;
   width: 430px;
-  height: 330px;
+  height: 450px;
   margin-right: 100px;
   filter: drop-shadow(-10px 17px 6px rgba(0, 0, 0, 0.15));
   /* z-index: 500; */
@@ -551,13 +690,14 @@ input[type="number"],
 }
 .option_img {
   height: 300px;
-  width: 100%;
+  width: 200%;
   border-radius: 30px;
   transition: transform 0.25s;
   opacity: 1;
 }
 .option_img:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 .fruit_name {
   color: rgb(37, 34, 34);
@@ -567,12 +707,15 @@ input[type="number"],
   font-weight: 400;
   letter-spacing: 0.3px;
   margin-top: 20px;
+  width: 200%;
 }
 .fruit_price {
   font-size: 20px;
   color: #cd171f;
   font-weight: bold;
   padding-top: 7px;
+  margin-left: 50%;
+  width: 100%;
 }
 .select {
   border: none;
@@ -584,6 +727,7 @@ input[type="number"],
   margin: 0 auto;
   font-weight: bold;
   font-size: 10px;
+  margin-left: 50%;
 }
 .section-6 {
   padding-top: 50px;
@@ -641,12 +785,18 @@ input[type="number"],
   font-size: 12px;
 }
 .footer {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  line-height: 0%;
   background-color: black;
   display: flex;
   padding: 10px;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  z-index: 1;
+  top: 10;
 }
 .sticky_footer {
   position: fixed;
@@ -666,7 +816,8 @@ input[type="number"],
   border: 1px solid white;
   background-color: black;
   color: white;
-  height: 30px;
+  height: 35px;
+  margin-top: 1%;
   /* border: none; */
 }
 .foot {
@@ -677,5 +828,63 @@ input[type="number"],
   border: 1px solid white;
   background-color: black;
   color: white;
+  height: 35px
   /* border: none; */
 }
+
+/* styling for footer*/
+
+.footer1 {
+  background-color: #7d9c5b;
+  position: relative;
+  height: 250px;
+  padding-top: 0.5%;
+}
+
+.footer1 > div {
+  height: 80%;
+  margin: 2% 5%;
+}
+
+.footer1 > div > div:nth-child(1) {
+  height: 65%;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "PT Sans", sans-serif;
+  line-height: 21px;
+}
+
+ul > li {
+  cursor: pointer;
+}
+
+li:hover {
+  color: #cd171f;
+}
+
+#logo {
+  display: flex;
+}
+
+#logo > li {
+  padding-right: 6%;
+}
+
+.footer1 > div > div:nth-child(3) {
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#copyright {
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+

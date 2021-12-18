@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
     <title>Document</title>
     <!-- link with css -->
     <link rel="stylesheet" href="ProductDetailPage.css" />
@@ -21,19 +25,53 @@
       rel="stylesheet"
     />
     <!-- icon -->
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
-    <!-- kimaye logo -->
-    <div class="kimaye_logo" id="myHeader">
-      <img
-        src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/website-logo_400x.png?v=1596288204"
-        alt=""
-      />
-    </div>
+
+    <div class="available">
+      <p>Currently available in Mumbai | Same day delivery</p>
+  </div>
+    
+    <!-- navigation bar -->
+
+    <div class="navbar">
+      <div>
+          <div class="dropdown">SHOP<i class="fal fa-angle-down"></i>
+              <div class="dropdown-content">
+                  <a href="ProductPage.html">ALL FRUITS</a>
+                  <a href="#">FRESH CUTS</a>
+                  <a href="#">FRUITS COMBOS</a>
+                  <a href="#">GIFTS BY KIMAYE</a>
+                  <a href="#">COMMUNITY BUYING</a>
+                  <a href="#">FRUITS X SUBSCRIPTION</a>
+                  <a href="#">REFUND AND REPLACEMENT</a>
+              </div>
+          </div>
+          <div class="dropdown">LEARN<i class="fal fa-angle-down"></i>
+              <div class="dropdown-content">
+                  <a href="#">OUR STORY</a>
+                  <a href="#">WHY KIMAYE</a>
+                  <a href="#">TRACEABILITY</a>
+                  <a href="#">BEYOND FRUITS</a>
+              </div>
+          </div>
+          <div>
+              <p id="grow">GROW</p>
+          </div>
+      </div>
+      <img src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/website-logo_400x.png?v=1596288204" alt="kimaye logo" height="35px" width="135px">
+      <div id="accountinfo">
+          <i class="fal fa-search searchbar"></i>
+          <form id="searchform">
+              <i class="fal fa-times hidebar"></i>
+              <input class="typeany" type="text" placeholder="Search for products">
+              <input type="submit" value="SEARCH">
+          </form>
+          <i class="fal fa-user gotologin"></i>
+          <i class="fal fa-shopping-bag gotocart"></i>
+      </div>
+  </div>
+
     <!-- header -->
     <div class="background">
       <div class="container">
@@ -54,11 +92,13 @@
 
         <div class="section_1">
           <div class="fruit_image">
-            <img
+            <div id="scaleup">
+              <img
               class="main_img"
               src="https://cdn.shopify.com/s/files/1/0449/5225/6667/products/grapefruit-cover.progressive.jpg?v=1639461484/"
               alt="Fruit Image1"
             />
+            </div>
             <div class="lower_imgs">
               <img
                 class="img1"
@@ -74,9 +114,7 @@
           </div>
           <div class="product_detail">
             <div>
-              <h2 class="product_name">
-                Kimaye Grapefruit (Pack of 2 & 4 pcs)
-              </h2>
+              <h2 class="product_name">Kimaye Grapefruit (Pack of 2 & 4 pcs)</h2>
               <div class="star">&#9734;&#9734;&#9734;&#9734;&#9734;</div>
               <p class="text">
                 Grapefruits are medium to large fruits. The peel is smooth,
@@ -90,7 +128,7 @@
               </p>
             </div>
             <p class="text">Origin : South Africa, Spain, China</p>
-            <p class="text">(Pack of 2)~ 0.5kg | (Pack of 4)~ 1.0kg</p>
+            <p class="text packvalue">(Pack of 2)~ 0.5kg | (Pack of 4)~ 1.0kg</p>
             <div class="price_range">₹ 144 – ₹ 269</div>
 
             <div class="product_packs">
@@ -114,20 +152,8 @@
             <div class="price">₹ 144</div>
             <div class="buy">
               <div class="quantity">
-                <input type="button" value="-" class="minus" />
-                <input
-                  type="number"
-                  step="1"
-                  min="1"
-                  max="999"
-                  name="quantity"
-                  value="1"
-                  title="Qty"
-                  class="number"
-                  size="4"
-                  pattern="[0-9]*"
-                  inputmode="numeric"
-                />
+                <input type="button" value="-" class="minus"/>
+                <p class="number">1</p>
                 <input type="button" value="+" class="plus" />
               </div>
 
@@ -171,7 +197,7 @@
         </div>
         <div class="bg">
           <div class="facts">
-            <h2 class="sub_heading">FRUIT FUN FACTS</h2>
+            <h2 class="sub_heading sub-heading2">FRUIT FUN FACTS</h2>
             <p class="text fact">
               The sweet-tart fruits are a natural cross between a pummelo and an
               orange. Grapefruit was named after their clustering growth habit,
@@ -374,6 +400,56 @@
         </div>
       </div>
     </div>
+
+    <!-- footer -->
+
+    <div class="footer1">
+      <div>
+          <div>
+              <div>
+                  <ul>
+                      <li type="none">
+                          <strong>FAQ's</strong>
+                      </li>
+                      <li type="none">
+                          <strong>Contact Us</strong>
+                      </li>
+                      <li type="none">
+                          <strong>Shipping & Return Policy</strong>
+                      </li>
+                      <li type="none">
+                          <strong>Terms & Conditions</strong>
+                      </li>
+                      <li type="none">
+                          <strong>Privacy Policy</strong>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <ul>
+                      <li type="none">Follow us on</li>
+                  </ul>
+                  <ul id="logo">
+                      <li type="none">
+                          <img src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/fb-icon.png?v=1599571756" alt="facebook logo">
+                      </li>
+                      <li type="none">
+                          <img src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/insta-icon.png?v=1599571756" alt="instagram logo">
+                      </li>
+                      <li type="none">
+                          <img src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/twitter-icon.png?v=1599571756" alt="twitter logo">
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <hr color="#69824e">
+          <div>
+              <p id="copyright">Copyright©2021. All Rights Reserved</p>
+              <img src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/ting.png?v=1599565040" alt="logo" height="20px">
+          </div>
+      </div>
+  </div>
+
     <div class="footer" id="footer">
       <img
         class="foot_img"
@@ -405,78 +481,12 @@
       </div>
     </div>
 
-    <script>
-      window.onscroll = function () {
-        myFunction();
-        // footFunction();
-      };
 
-      var header = document.getElementById("myHeader");
-      // var sticky = header.offsetTop;
-      // var footer = document.getElementsById("footer");
-      function myFunction() {
-        if (window.pageYOffset > 100) {
-          header.classList.add("sticky");
-        } else {
-          header.classList.remove("sticky");
-        }
-      }
-      // function footFunction() {
-      //   if (window.pageYOffset > 300) {
-      //     footer.classList.add("sticky_footer");
-      //   } else {
-      //     footer.classList.remove("sticky_footer");
-      //   }
-      // }
+    
 
-      // const pack=document.querySelector('.pp');
-      // pack.addEventListener("mouseover",addPack)
-
-      // const addPack=function(){
-      //   pack.classList.toggle("image_underline")
-      // }
-
-      const btnRight = document.querySelector(".right");
-      const btnLeft = document.querySelector(".left");
-      let currSlide = 0;
-      const slides = document.querySelectorAll(".product");
-      const maxSlide = slides.length;
-      const goToSlide = function (slide) {
-        slides.forEach(
-          (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
-        );
-      };
-      goToSlide(0);
-
-      const nextSlide = function () {
-        console.log("right", currSlide);
-        if (currSlide == maxSlide - 1) {
-          currSlide = 0;
-        } else {
-          currSlide++;
-        }
-        goToSlide(currSlide);
-      };
-
-      const prevSlide = function () {
-        console.log("left", currSlide);
-        if (currSlide == 0) {
-          currSlide = maxSlide - 1;
-        } else {
-          currSlide--;
-        }
-        goToSlide(currSlide);
-      };
-      btnRight.addEventListener("click", nextSlide);
-      btnLeft.addEventListener("click", prevSlide);
-    </script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+    
   </body>
 </html>
+
+<script src="ProductDetailPage.js">
+</script>
