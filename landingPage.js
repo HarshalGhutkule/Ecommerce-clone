@@ -35,14 +35,24 @@ document.querySelector(".navbar > div:nth-child(1) + img").addEventListener("cli
 
 // function for go to log-in page
 
-// document.querySelector(".gotologin").addEventListener("click", function(){
-//     window.location.href = "Log-inPage.html";
-// })
+document.querySelector(".gotologin").addEventListener("click", function(){
+    window.location.href = "Signin.html";
+})
 
 // function for go to cart page
 
 document.querySelector(".gotocart").addEventListener("click", function(){
     window.location.href = "CartPage.html";
+})
+
+// gotoallfruits function
+
+document.querySelector("#gotoallfruits").addEventListener("click", function(){
+    window.location.href = "ProductPage.html";
+})
+
+document.querySelector("#gotoallfruits1").addEventListener("click", function(){
+    window.location.href = "ProductPage.html";
 })
 
 // slider function

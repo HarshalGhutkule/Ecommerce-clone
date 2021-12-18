@@ -32,12 +32,6 @@ document.querySelector(".navbar > div:nth-child(1) + img").addEventListener("cli
     window.location.href = "landingPage.html";
 })
 
-// function for go to log-in page
-
-document.querySelector(".gotologin").addEventListener("click", function(){
-    window.location.href = "Log-inPage.html";
-})
-
 // function for go to cart page
 
 document.querySelector(".gotocart").addEventListener("click", function(){
@@ -77,6 +71,18 @@ document.querySelector(".sub2").addEventListener("click",addData);
     };
     userData.push(userCard);
     localStorage.setItem("userDatabase", JSON.stringify(userData));
+
+    if(fstname == "" || lstname == "" || emlname == "" || passname == ""){
+        if(passname.length <= 5){
+            alert("Please fill all information");
+        }
+        else{
+            alert("Please fill all information");
+        }
+    }
+    else {
+        alert("Register successfull");
+    }
 }
 
 // user login function
@@ -95,9 +101,11 @@ document.querySelector(".sub").addEventListener("click", addDetails);
         for(var i=0; i<userdata.length; i++){
             if((email == userdata[i].emailname) && (passwor == userdata[i].passwordname)){
                 window.location.href = "landingPage.html";
+                break;
             }
             else{
                 alert("Invalid Email or Password");
+                break;
             }
         }
     }
