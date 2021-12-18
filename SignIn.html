@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="SignIn.css">
 
 </head>
@@ -46,13 +47,12 @@
         </div>
         <img src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/website-logo_400x.png?v=1596288204" alt="kimaye logo" height="35px" width="135px">
         <div id="accountinfo">
-            <i class="fal fa-search searchbar">
-                <form id="navform">
-                    <i class="fal fa-times hidebar"></i>
-                    <input class="typeany" type="text" placeholder="Search for products">
-                    <input type="submit" value="SEARCH">
-                </form>
-            </i>
+            <i class="fal fa-search searchbar"></i>
+            <form id="navform">
+                <i class="fal fa-times hidebar"></i>
+                <input id="typeany" type="text" placeholder="Search for products">
+                <input id="typeany1" type="submit" value="SEARCH">
+            </form>
             <i class="fal fa-user gotologin"></i>
             <i class="fal fa-shopping-bag gotocart"></i>
         </div>
@@ -67,31 +67,56 @@
     
 <div id="contner">
     <div class="creatacc">
-        <div class="fb"><p style="padding:10px"> Signin With Facebook</p></div>
-        <div class="fb google"><p style="padding:10px"> Signin With Google</p></div>
+        <div class="fb"><p> Signin With Facebook</p>
+            
+        </div>
+        <div class="fb google"><p> Signin With Google</p></div>
         <form>
             <div class="acc">
                 <div >
-                    <i class="fa fa-external-link" style="font-size:24px"></i>  
+                    <i class="fa fa-external-link" style="font-size:34px"></i>  
                 </div>
                 <div>Login</div>
                 </div>
                 <div class="inp">
-               
-                <label>Email adress</label><br>
-                <input  id="eml"="email" value=""/><br>
-                <label>Password</label><br>
+                <label>Email address *</label><br>
+                <input  id="eml" type="email" value=""/>
+                <br><br>
+                <label>Password *</label><br>
                 <input id="pass" type="Password" minlength="5" value=""/><br>
-                <p class="resetpass"> *lsot your password</p>
+                <p class="resetpass"> <i class="far fa-question-circle"></i>lost your password</p>
                 <button class="sub">LOGIN</button>
                 </div>
         </form>
+        <div class="register">
+            <form>
+                <div class="userreg">
+                    <div><i class="fa fa-user-o" style="font-size:30px"></i>Register</div>
+                    </div>
+                    <div class="information">
+                    <label >First Name</label>
+                    <br>
+                    <input id="fname" type="name" value=""/>
+                    <br><br>
+                    <label>Last Name</label><br>
+                    <input id="lname" type="name" value=""/>
+                    <br><br>
+                    <label>Email address *</label><br>
+                    <input  id="eml2" type="email" value=""/>
+                    <br><br>
+                    <label>Password *</label><br>
+                    <input id="pass2" type="Password" minlength="5" value=""/>
+                    <br><br>
+                    <button class="sub2">REGISTER</button>
+                    </div>
+            </form>
+        </div>
     </div>
-    <div style="">
+    <div id="mainreg">
         <p class="reg"> Register</p>
-       
         <p class="sumary"> Welcome to Kimaye! Help us with a few details before you begin enjoying our<br> safe and tasty fruits.</p>
-        <button class="loginbtn">    REGISTER</button>
+        <button class="regbtn">REGISTER</button>
+        <button class="loginbtn">LOGIN</button>
     </div>
 </div>
 
@@ -139,7 +164,7 @@
         <hr color="#69824e">
         <div>
             <p id="copyright">Copyright©2021. All Rights Reserved</p>
-            <img src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/ting.png?v=1599565040" alt="logo" height="40%">
+            <img src="https://cdn.shopify.com/s/files/1/0449/5225/6667/files/ting.png?v=1599565040" alt="logo" height=20px">
         </div>
     </div>
 </div>

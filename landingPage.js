@@ -1,10 +1,19 @@
-// navbar search dropdown Option
+// navbar show search dropdown Option
 
 document.querySelector(".searchbar").addEventListener("click", showsearch);
 
 function showsearch(){
-    document.querySelector("form").style.display = "block";
+    document.querySelector("#searchform").style.display = "block";
 }
+
+// navbar hide search dropdown Option
+
+document.querySelector(".hidebar").addEventListener("click", closesearch);
+
+function closesearch(){
+    document.querySelector("#searchform").style.display = "none";
+}
+
 
 // navbar search SUBMIT button function
 
@@ -26,9 +35,9 @@ document.querySelector(".navbar > div:nth-child(1) + img").addEventListener("cli
 
 // function for go to log-in page
 
-document.querySelector(".gotologin").addEventListener("click", function(){
-    window.location.href = "Log-inPage.html";
-})
+// document.querySelector(".gotologin").addEventListener("click", function(){
+//     window.location.href = "Log-inPage.html";
+// })
 
 // function for go to cart page
 
