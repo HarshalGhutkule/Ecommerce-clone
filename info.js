@@ -15,8 +15,10 @@ function validation() {
         return false;
     }
     if (first_name == "") {
+        
         document.getElementById("fill_first").innerHTML = "**Please fill input field"
         return false;
+       
     }
     if (last_name == "") {
         document.getElementById("fill_last").innerHTML = "**Please fill input field"
@@ -39,7 +41,7 @@ function validation() {
 
 function shopping(event) {
     event.preventDefault();
-    console.log("here")
+    
 
     var kimayeObj = {
         email: form.email.value,
