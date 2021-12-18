@@ -41,12 +41,30 @@ document.querySelector(".gotologin").addEventListener("click", function(){
 
 
 
-localStorage.clear()
-localStorage.setItem("price4", 144)
-var items=[]
-var n=JSON.parse(localStorage.getItem("price4"));
+
+// function for taking cartdata from product page
+
+var data = JSON.parse(localStorage.getItem("cartDetails"));
+
+display(data);
 
 
+function display(data){
+  data.map(function(elem,index){
+  var productname = document.querySelector(".productName");
+  productname.textContent = elem.name;
+
+  var productweight = document.querySelector(".bottomtext");
+  productweight.textContent = elem.packs;
+
+  var productprice = document.querySelector(".priceamount4");
+  productprice.textContent = elem.price;
+
+  var productqty = document.querySelector(".displaybox");
+  productqty.value = elem.qty;
+
+  })
+}
 
     
    /* When the user clicks on the button, 
@@ -70,7 +88,6 @@ window.onclick = function(event) {
 }
 
 var display=document.getElementById("display");
-console.log(display)
 display="0"
 document.getElementById("buttonplus").addEventListener("click",additionFun);
 function additionFun(){
@@ -79,7 +96,6 @@ function additionFun(){
     // var count=0;
     // count++;
     display++;
-    console.log(display)
     document.getElementById("display").value=display;
 
     
@@ -93,35 +109,38 @@ function subtraction(){
     var display=document.getElementById("display").value;
     
     if(display>0){   
-    console.log("yes")
     display--;
     document.getElementById("display").value=display;
     }
 }
-var price=document.getElementById("price2").textContent=n
+var price=document.querySelector(".priceamount4").textContent
 document.getElementById("buttonplus").addEventListener("click",totalprice);
 document.getElementById("another").addEventListener("click",totalprice2);
 document.getElementById("totalmoney").textContent=price
 function totalprice(){
-    var price=document.getElementById("price2").innerHTML
-    console.log("pr"+price)
-    document.getElementById("totalmoney").textContent=price
+  var bag = "";
+    for(var i=0; i<price.length; i++){
+      if(i>1){
+        bag += price[i];
+      }
+    }
+    document.getElementById("totalmoney").textContent=bag;
    
     var display=document.getElementById("display").value;
-    console.log(display)
    
    
    
     display=+display;
-    price=+price
-    var product=price*display;
-   
-    console.log(product)
+    bag=+bag
+    var product=bag*display;
+  
     var price2=document.getElementById("totalmoney").textContent=product;
     document.getElementById("totalamount").textContent=product;
     var totalPrice=document.getElementById("totalamount").textContent;
     document.getElementById("subtotal").textContent=product;
-    localStorage.setItem("totalValue3",product)
+    localStorage.setItem("totalValue3",product);
+
+    return bag;
     
 }
 
@@ -141,18 +160,11 @@ function totalprice2(price2){
   
     display=+display;
     price2=+price2
-    var product=price2-price
-    console.log("display"+display)
-    
-    console.log("prc2"+price2)
-    // if(price2!=0){ 
-    // var product=price2-333;
-    // }
-    console.log("price"+ price2)
+    var product=price2-price;
     
     var price2=document.getElementById("totalmoney").textContent=product;
-    document.getElementById("totalamount").textContent=product
-    document.getElementById("subtotal").textContent=product
+    document.getElementById("totalamount").textContent=product;
+    document.getElementById("subtotal").textContent=product;
    }
 
 
@@ -160,10 +172,9 @@ function totalprice2(price2){
 
 // total money needed to pay
 var n=JSON.parse(localStorage.getItem("price4"));
-document.getElementById("totalamount").textContent=n
-console.log(product)
-document.getElementById("subtotal").textContent=n
-document.getElementById("freedelivery").textContent=350-n
+document.getElementById("totalamount").textContent=totalprice();
+document.getElementById("subtotal").textContent=totalprice();
+document.getElementById("freedelivery").textContent=350-totalprice();
 document.getElementById("buttonplus").addEventListener("click",moreMoney)
 function moreMoney(){
     document.getElementById("freedelivery").textContent=350-document.getElementById("totalamount").textContent;
@@ -180,8 +191,7 @@ console.log("n"+n)
 document.getElementById("another").addEventListener("click",moreMoney2);
 function moreMoney2(){
    document.getElementById("spend").textContent;
-   console.log("money2")
-   document.getElementById("freedelivery").textContent=350-n
+   document.getElementById("freedelivery").textContent=350-totalprice();
   
    document.getElementById("freedelivery").textContent=(350-document.getElementById("totalamount").textContent)
 }
@@ -190,10 +200,9 @@ function checkout(){
 
    var product_name=document.querySelector(".productName").textContent
    var product_image=document.querySelector("imageUrl")
-   console.log(product_image)
    var dataObj={Name:product_name,
    image:"https://cdn.shopify.com/s/files/1/0449/5225/6667/products/grapefruit-funfacts_219x.png?v=1639461506",
-   price:n}
+   price:totalprice()}
    dataArray.push(dataObj)
    localStorage.setItem("productDetails",JSON.stringify(dataArray))
    window.location.href="info.html"

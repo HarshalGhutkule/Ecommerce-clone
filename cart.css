@@ -6,7 +6,7 @@ body {
 
 .container{
     display: grid;
-    grid-template-rows:80px 830px;
+    grid-template-rows:80px 900px;
     grid-template-columns: repeat(12,1fr);
 
     grid-template-areas:
@@ -238,18 +238,20 @@ body {
     padding-bottom: 100px;
 }
 .midbox2{
-    border:1px solid black;
+    border: 1px solid transparent;
     width:80%;
-    height:400px;
+    height:500px;
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
     background-color: #f8f8f8;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 .instructbox{
     border:1px;
     height:90px;
     width:100%;
+    margin-top: 4%;
 }
 .instructions{
     font-size: 24px;
@@ -271,6 +273,13 @@ body {
     height: 115px;
     margin-left: 97px;
     background-color: white;
+    font-family: "PT Sans", "MS Sans Serif", Geneva, sans-serif;
+
+}
+
+strong {
+    margin-left: 3%;
+    margin-top: 0%;
 }
 .subtotal{
     font-weight: 549;
@@ -288,11 +297,9 @@ body {
     font-weight: 550;
 }
 .textarea{
-    padding-left: 50px;
+    padding-left: 0px;
     width: 400px;
-  
-  
-    
+    margin-left: 5%;
 }
 .textareabox{
     border:1px ;
@@ -310,7 +317,7 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: 50px 50px;
     grid-gap: 10px;
-    
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
 }
 .continueshop>div{
     border:1px;
@@ -321,16 +328,19 @@ body {
     height: 100%;
     width: 100%;
     color: white;
-    font-size:15px;
+    font-size:17px;
+    border: transparent;
+    cursor: pointer;
 }
 .buttoncheckout2{
     background-color: 
     #98cb4c; 
-    height: 100%;
+    height: 80%;
     width: 100%;
     color: white;
-    font-size:15px;
+    font-size:17px;
     cursor: pointer;
+    border: transparent;
 }
 
 .buttoncheckout:hover{
@@ -350,7 +360,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding-left: 130px;
-   
+   font-family: "PT Sans", Arial, Helvetica, sans-serif;
 }
 
 .dropdown2{
@@ -484,7 +494,7 @@ th{
 .boxbutton{
     border:1px ;
     width:70px;
-    height:30px;
+    height:40px;
     background-color: white;
     display: flex;
 }

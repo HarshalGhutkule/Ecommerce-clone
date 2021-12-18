@@ -142,12 +142,9 @@ document.querySelector(".gotocart").addEventListener("click", function(){
 
       document.querySelector(".add").addEventListener("click", additems);
 
-      var updatedqty = JSON.parse(localStorage.getItem("cartDetails"));
-
       var cartData = [];
 
       function additems(){
-        console.log(updatedqty);
           var name = document.querySelector(".product_name").textContent;
           var pac = document.querySelector(".packvalue").textContent;
           var price = document.querySelector(".price").textContent;
