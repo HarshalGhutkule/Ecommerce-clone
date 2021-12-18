@@ -1,0 +1,84 @@
+document.querySelector("#form").addEventListener("submit", shopping)
+var kimayeArr = JSON.parse(localStorage.getItem("kimayeData")) || [];
+
+function validation() {
+    
+    var email = document.getElementById("email").value;
+    
+    var first_name = document.getElementById("first").value;
+    var last_name = document.getElementById("last").value;
+    var address = document.getElementById("addr").value;
+    var city_name = document.getElementById("city").value
+    var mobile = document.getElementById("mobile").value;
+    if (email == "") {
+        document.getElementById("fill_user").innerHTML = "**Please fill input field"
+        return false;
+    }
+    if (first_name == "") {
+        
+        document.getElementById("fill_first").innerHTML = "**Please fill input field"
+        return false;
+       
+    }
+    if (last_name == "") {
+        document.getElementById("fill_last").innerHTML = "**Please fill input field"
+        return false;
+    }
+    if (address == "") {
+        document.getElementById("fill_address").innerHTML = "**Please fill input field"
+        return false;
+    }
+    if (city_name == "") {
+        document.getElementById("fill_city").innerHTML = "**Please fill input field"
+        return false;
+    }
+    if (mobile== "") {
+        document.getElementById("fill_mobile").innerHTML = "**Please fill input field"
+        return false;
+    }
+
+}
+
+function shopping(event) {
+    event.preventDefault();
+    
+
+    var kimayeObj = {
+        email: form.email.value,
+        region: form.region.value,
+        first_name: form.first.value,
+        last_name: form.last.value,
+        address: form.addr.value,
+        apartment: form.apartment.value,
+        city: form.city.value,
+        state: form.state.value,
+        pincode: form.pincode.value,
+        mobile: form.mobile.value
+    }
+    kimayeArr.push(kimayeObj)
+    localStorage.setItem("kimayeData", JSON.stringify(kimayeArr))
+    document.querySelector("#submit").addEventListener("click", function () {
+        window.location.href = "Shipping.html"
+       
+   })
+}
+var promo = document.querySelector("#discount>input")
+var count = 576
+var checkOut1 = document.querySelector(".total_cost1")
+var checkOut2 = document.querySelector(".total_cost2")
+var checkOut3 = document.querySelector(".total_cost3")
+document.querySelector(".promobutton").addEventListener("click", function(){
+            if(promo.value == "masai30"){
+                count = Math.floor((count*70)/100);
+                checkOut1.textContent = "  ₹" + count 
+                checkOut2.textContent = "  ₹" + count 
+                checkOut3.textContent = "  ₹" + count 
+                console.log("here")
+            }
+            else{
+                alert("error");
+            }
+})
+    
+
+
