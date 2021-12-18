@@ -1,8 +1,45 @@
 document.querySelector("#form").addEventListener("submit", shopping)
 var kimayeArr = JSON.parse(localStorage.getItem("kimayeData")) || [];
 
+function validation() {
+    
+    var email = document.getElementById("email").value;
+    
+    var first_name = document.getElementById("first").value;
+    var last_name = document.getElementById("last").value;
+    var address = document.getElementById("addr").value;
+    var city_name = document.getElementById("city").value
+    var mobile = document.getElementById("mobile").value;
+    if (email == "") {
+        document.getElementById("fill_user").innerHTML = "**Please fill input field"
+        return false;
+    }
+    if (first_name == "") {
+        document.getElementById("fill_first").innerHTML = "**Please fill input field"
+        return false;
+    }
+    if (last_name == "") {
+        document.getElementById("fill_last").innerHTML = "**Please fill input field"
+        return false;
+    }
+    if (address == "") {
+        document.getElementById("fill_address").innerHTML = "**Please fill input field"
+        return false;
+    }
+    if (city_name == "") {
+        document.getElementById("fill_city").innerHTML = "**Please fill input field"
+        return false;
+    }
+    if (mobile== "") {
+        document.getElementById("fill_mobile").innerHTML = "**Please fill input field"
+        return false;
+    }
+
+}
+
 function shopping(event) {
     event.preventDefault();
+    console.log("here")
 
     var kimayeObj = {
         email: form.email.value,
@@ -24,7 +61,7 @@ function shopping(event) {
    })
 }
 var promo = document.querySelector("#discount>input")
-var count = 1200
+var count = 576
 var checkOut1 = document.querySelector(".total_cost1")
 var checkOut2 = document.querySelector(".total_cost2")
 var checkOut3 = document.querySelector(".total_cost3")
@@ -39,4 +76,7 @@ document.querySelector(".promobutton").addEventListener("click", function(){
             else{
                 alert("error");
             }
-    })
+})
+    
+
+
