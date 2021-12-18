@@ -110,7 +110,7 @@ body {
     position: relative;
   }
   
-  form {
+  #searchform {
     display: none;
     position: absolute;
     top: 45px; 
@@ -135,11 +135,11 @@ body {
   }
   
   .hidebar {
-    display: flex;
-    justify-content: flex-end;
-    line-height: 0%;
-    margin-bottom: 5%;
-  }
+  display: flex;
+  justify-content: flex-end;
+  line-height: 0%;
+  margin-bottom: 5%;
+}
   
 
 

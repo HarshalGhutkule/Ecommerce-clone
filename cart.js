@@ -186,7 +186,6 @@ function moreMoney(){
       //   document.getElementById("freedelivery").textContent="CONGRATULATIONS YOU HAVE GOT";
       //   document.getElementById("moreto").textContent="CONGRATULATIONS YOU HAVE GOT"
     }
-console.log("n"+n)
 }
 document.getElementById("another").addEventListener("click",moreMoney2);
 function moreMoney2(){
@@ -202,7 +201,7 @@ function checkout(){
    var product_image=document.querySelector("imageUrl")
    var dataObj={Name:product_name,
    image:"https://cdn.shopify.com/s/files/1/0449/5225/6667/products/grapefruit-funfacts_219x.png?v=1639461506",
-   price:totalprice()}
+   price:document.getElementById("totalamount").textContent}
    dataArray.push(dataObj)
    localStorage.setItem("productDetails",JSON.stringify(dataArray))
    window.location.href="info.html"

@@ -42,7 +42,7 @@ document.querySelector(".gotologin").addEventListener("click", function(){
 // function for go to cart page
 
 document.querySelector(".gotocart").addEventListener("click", function(){
-    window.location.href = "CartPage.html";
+    window.location.href = "cart.html";
 })
 
 // gotoallfruits function

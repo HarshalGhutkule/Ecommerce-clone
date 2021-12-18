@@ -6,6 +6,14 @@ function showsearch(){
     document.querySelector("form").style.display = "block";
 }
 
+// navbar hide search dropdown Option
+
+document.querySelector(".hidebar").addEventListener("click", closesearch);
+
+function closesearch(){
+    document.querySelector("#searchform").style.display = "none";
+}
+
 // navbar search SUBMIT button function
 
 document.querySelector("form").addEventListener("submit", showproduct);
@@ -17,6 +25,7 @@ function showproduct(event){
         window.location.href = "ProductPage.html";
     }
 }
+
 
 // function for go to home page
 
@@ -33,7 +42,7 @@ document.querySelector(".gotologin").addEventListener("click", function(){
 // function for go to cart page
 
 document.querySelector(".gotocart").addEventListener("click", function(){
-  window.location.href = "CartPage.html";
+  window.location.href = "cart.html";
 })
 
 // function for adding product data on page
@@ -244,6 +253,6 @@ var data = [
 // function for go to cart page
 
 document.querySelector(".img").addEventListener("click", function(){
-  window.location.href = "ProductDetailsPage.html";
+  window.location.href = "ProductDetailPage.html";
 })
 

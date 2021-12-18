@@ -81,4 +81,29 @@ document.querySelector(".promobutton").addEventListener("click", function(){
 })
     
 
+var productdetails = JSON.parse(localStorage.getItem("productDetails"));
+
+display(productdetails);
+
+
+function display(productdetails){
+    productdetails.map(function(elem,index){
+  var productname = document.querySelector(".grapefruit");
+  productname.textContent = elem.Name;
+
+  var productimage = document.querySelector(".grapeimg");
+  productimage.setAttribute("src", elem.image);
+
+  var productprice = document.querySelector("#priceoff");
+  productprice.textContent = elem.price;
+
+  var productprice1 = document.querySelector("#priceoff1");
+  productprice1.textContent = elem.price;
+
+  var productprice2 = document.querySelector("#priceoff2");
+  productprice2.textContent = elem.price;
+
+  })
+}
+
 

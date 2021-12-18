@@ -23,7 +23,7 @@
         <form id="form" onsubmit="return validation()">
           <div class="header">
             <h3>Contact information</h3>
-            <p>Already have an account?<a href="">Log in</a></p>
+            <p>Already have an account?<a href="SignIn.html">Log in</a></p>
           </div>
           <br />
           <input id="email" type="text" placeholder="Email" />
@@ -98,15 +98,15 @@
         <table id="table">
           <tr>
             <td>
-              <img
+              <img class="grapeimg"
                 height="70px"
                 width="70px"
-                src="https://cdn.shopify.com/s/files/1/0449/5225/6667/products/grapefruit-cover.progressive.jpg?v=1639461484"
+                src=""
                 alt="prod"
               />
             </td>
-            <td>Kimaye Grapefruit (Pack of 2 & 4 pcs)</td>
-            <td class="total_cost1">₹576.00</td>
+            <td class="grapefruit"></td>
+            <td class="total_cost1">₹<span id="priceoff"></span></td>
           </tr>
         </table>
         <hr />
@@ -117,7 +117,7 @@
         <hr />
         <div id="subtotal">
           <p>subtotal</p>
-          <p class="total_cost2">₹576.00</p>
+          <p class="total_cost2">₹<span id="priceoff1"></span></p>
         </div>
         <div id="shipping">
           <p>shipping</p>
@@ -127,7 +127,7 @@
         <hr />
         <div id="total">
           <p>Total</p>
-          <p class="rate total_cost3">₹576.00</p>
+          <p class="rate total_cost3">₹<span id="priceoff2"></span></p>
         </div>
       </div>
     </div>
