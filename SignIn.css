@@ -272,11 +272,8 @@ font-family: "PT Sans", Arial, Helvetica, sans-serif;
     color: white;
 }
 
-a::before {
-    content: "\f015";
-    display: inline-block;
-    margin-right: 5px;
-    font-family: FontAwesome;
+.home a:hover {
+    text-decoration: underline;
 }
 
 /* styling for footer*/
