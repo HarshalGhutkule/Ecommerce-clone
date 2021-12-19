@@ -1,6 +1,7 @@
 document.querySelector("#form").addEventListener("submit", shopping)
 var kimayeArr = JSON.parse(localStorage.getItem("kimayeData")) || [];
 
+
 function validation() {
     var email = document.getElementById("email").value;
     var first_name = document.getElementById("first").value;
@@ -55,24 +56,6 @@ function shopping(event) {
     localStorage.setItem("kimayeData", JSON.stringify(kimayeArr))
     window.location.href = "Shipping.html"
 }
-var promo = document.querySelector("#discount>input")
-var count = 576
-var checkOut1 = document.querySelector(".total_cost1")
-var checkOut2 = document.querySelector(".total_cost2")
-var checkOut3 = document.querySelector(".total_cost3")
-document.querySelector(".promobutton").addEventListener("click", function(){
-            if(promo.value == "masai30"){
-                count = Math.floor((count*70)/100);
-                checkOut1.textContent = "  ₹" + count 
-                checkOut2.textContent = "  ₹" + count 
-                checkOut3.textContent = "  ₹" + count 
-                console.log("here")
-            }
-            else{
-                alert("error");
-            }
-})
-    
 
 var productdetails = JSON.parse(localStorage.getItem("productDetails"));
 
@@ -98,5 +81,23 @@ function display(productdetails){
 
   })
 }
+
+var promo = document.querySelector("#discount>input")
+var count = document.querySelector("#priceoff").textContent;
+var checkOut1 = document.querySelector(".total_cost1")
+var checkOut2 = document.querySelector(".total_cost2")
+var checkOut3 = document.querySelector(".total_cost3")
+document.querySelector(".promobutton").addEventListener("click", function(){
+            if(promo.value == "masai30"){
+                count = Math.floor((count*70)/100);
+                checkOut1.textContent = "  ₹" + count 
+                checkOut2.textContent = "  ₹" + count 
+                checkOut3.textContent = "  ₹" + count 
+                console.log("here")
+            }
+            else{
+                alert("error");
+            }
+})
 
 

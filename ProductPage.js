@@ -27,7 +27,7 @@ function showproduct(event){
 }
 
 
-// function for go to home page
+// function for go to home page.
 
 document.querySelector(".navbar > div:nth-child(1) + img").addEventListener("click", function(){
   window.location.href = "landingPage.html";

@@ -26,7 +26,7 @@ function closesearch(){
     document.querySelector("#navform").style.display = "none";
 }
 
-// function for go to home page
+// function for go to home page.
 
 document.querySelector(".navbar > div:nth-child(1) + img").addEventListener("click", function(){
     window.location.href = "landingPage.html";

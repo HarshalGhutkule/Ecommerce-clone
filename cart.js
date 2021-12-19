@@ -27,7 +27,7 @@ function showproduct(event){
     }
 }
 
-// function for go to home page
+// function for go to home page.
 
 document.querySelector(".navbar > div:nth-child(1) + img").addEventListener("click", function(){
     window.location.href = "landingPage.html";
@@ -93,8 +93,6 @@ document.getElementById("buttonplus").addEventListener("click",additionFun);
 function additionFun(){
     console.log("worked")
     var display=document.getElementById("display").value;
-    // var count=0;
-    // count++;
     display++;
     document.getElementById("display").value=display;
 
