@@ -2,9 +2,7 @@ document.querySelector("#form").addEventListener("submit", shopping)
 var kimayeArr = JSON.parse(localStorage.getItem("kimayeData")) || [];
 
 function validation() {
-    
     var email = document.getElementById("email").value;
-    
     var first_name = document.getElementById("first").value;
     var last_name = document.getElementById("last").value;
     var address = document.getElementById("addr").value;
@@ -41,8 +39,6 @@ function validation() {
 
 function shopping(event) {
     event.preventDefault();
-    
-
     var kimayeObj = {
         email: form.email.value,
         region: form.region.value,
@@ -57,10 +53,7 @@ function shopping(event) {
     }
     kimayeArr.push(kimayeObj)
     localStorage.setItem("kimayeData", JSON.stringify(kimayeArr))
-    document.querySelector("#submit").addEventListener("click", function () {
-        window.location.href = "Shipping.html"
-       
-   })
+    window.location.href = "Shipping.html"
 }
 var promo = document.querySelector("#discount>input")
 var count = 576

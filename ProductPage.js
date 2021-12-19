@@ -36,7 +36,7 @@ document.querySelector(".navbar > div:nth-child(1) + img").addEventListener("cli
 // function for go to log-in page
 
 document.querySelector(".gotologin").addEventListener("click", function(){
-  window.location.href = "Log-inPage.html";
+  window.location.href = "SignIn.html";
 })
 
 // function for go to cart page
@@ -50,9 +50,9 @@ document.querySelector(".gotocart").addEventListener("click", function(){
 var data = [
     {
       
-      name: "Kimaye Cherries(Imported) (Pack of 125g, 250g & 500g)",
-      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/cherry-imported-2A.progressive.jpg?v=1629455322",
-      price: "₹ 359 – ₹ 1,399",
+      name: "Kimaye Grapefruit (Pack of 2 & 4 pcs)",
+      image: "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/grapefruit-cover_360x.jpg?v=1639461484",
+      price: "₹ 144 – ₹ 269",
       cart:"Add to Card"
      
      

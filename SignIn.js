@@ -35,7 +35,7 @@ document.querySelector(".navbar > div:nth-child(1) + img").addEventListener("cli
 // function for go to cart page
 
 document.querySelector(".gotocart").addEventListener("click", function(){
-    window.location.href = "CartPage.html";
+    window.location.href = "cart.html";
 })
 
 
