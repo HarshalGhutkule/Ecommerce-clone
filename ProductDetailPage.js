@@ -30,7 +30,7 @@ function showproduct(event){
 // function for go to home page.
 
 document.querySelector(".navbar > div:nth-child(1) + img").addEventListener("click", function(){
-    window.location.href = "landingPage.html";
+    window.location.href = "index.html";
 })
 
 // function for go to log-in page

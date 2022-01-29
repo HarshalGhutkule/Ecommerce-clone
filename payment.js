@@ -43,7 +43,8 @@ document.querySelector(".promobutton").addEventListener("click", function(){
 })
 
 document.querySelector("#btn").addEventListener("click", function () {
-    alert("Payment successfull")
+    alert("Payment successfull");
+    window.location.href = "index.html";
 })
 
 

@@ -2,6 +2,7 @@ body {
     background-image: url(texture/fed7656f533941ed8de02ae398fc4f22-0001.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0%;
 }
 
 .container{
@@ -135,6 +136,8 @@ body {
 .top{
     height: 35px;
     background-color:#437111 ;
+    margin-top: 0%;
+    border: 1px solid transparent;
 }
 .middle{
     grid-area: m;
@@ -159,7 +162,7 @@ body {
     padding-bottom: 10px;
     font-weight: 100;
     font-size: 14px;
-    padding-top: 1%;
+    margin-top: 1%;
     height: 3px;
     font-family: PT Sans, Arial, Helvetica, sans-serif;
 }

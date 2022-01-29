@@ -29,7 +29,7 @@ function closesearch(){
 // function for go to home page.
 
 document.querySelector(".navbar > div:nth-child(1) + img").addEventListener("click", function(){
-    window.location.href = "landingPage.html";
+    window.location.href = "index.html";
 })
 
 // function for go to cart page
@@ -100,7 +100,7 @@ document.querySelector(".sub").addEventListener("click", addDetails);
 
         for(var i=0; i<userdata.length; i++){
             if((email == userdata[i].emailname) && (passwor == userdata[i].passwordname)){
-                window.location.href = "landingPage.html";
+                window.location.href = "index.html";
                 break;
             }
             else{

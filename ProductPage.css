@@ -2,6 +2,7 @@ body {
     background-image: url(texture/fed7656f533941ed8de02ae398fc4f22-0001.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0%;
 }
 
 @font-face {
