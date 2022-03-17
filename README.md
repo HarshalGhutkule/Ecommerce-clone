@@ -40,7 +40,7 @@ A collaborative project built by a team of 6 executed in 5days.
 ![Logo](https://cdn.shopify.com/s/files/1/0449/5225/6667/files/website-logo_400x.png?v=1596288204)
 
 
-![HomePage](https://user-images.githubusercontent.com/95927895/146681135-68d65fb9-91e4-4897-ad41-db6af7e17945.png)
+![HomePage](https://user-images.githubusercontent.com/95927895/158878550-2d6259f7-7eaf-4609-a5bf-9ba5c514943e.png)
 
 
 
