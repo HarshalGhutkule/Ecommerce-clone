@@ -1,12 +1,46 @@
-# Ecommerce-clone
-kimaye-clone our construct week project
+# Clone of Kimaye
 
-Key Features of Project:
+Kimaye is growers of India's finest fruits, you can order fruits online through their website.
+A collaborative project built by a team of 6 executed in 5days.
+
+## How to run the app?
+- Clone the repo and run the index.html.
+    - https://github.com/HarshalGhutkule/Kimaye-clone.git
+## Built with
+- HTML
+- CSS
+- JavaScript
+## Created Pages
+
+- Landing Page
+- Sign in Page
+- Product Listing Page
+- Product Details Page
+- Cart Page
+- Checkout Page
+- Payment Page
+## Functionalities Added
+
+- Responsiveness in landing page
+- Manual display carousel
+- User authentication
+- Functionality to buy a Item
+- Functionality to view Item Details
+- Functionality to add a Items in cart
+- Functionality to make a payment
+
+## Team Members
+- [Aman Verma](https://github.com/aman1517)
+- [Vipin Awadhiya](https://github.com/Vipin115)
+- [Meghna Singh](https://github.com/Meghna9027)
+- [Vishnu PS](https://github.com/VishnuPScodes)
+- [Nagendra pratap singh hada](https://github.com/Firef1ghter)
+
+
+![Logo](https://cdn.shopify.com/s/files/1/0449/5225/6667/files/website-logo_400x.png?v=1596288204)
+
+
 ![HomePage](https://user-images.githubusercontent.com/95927895/146681135-68d65fb9-91e4-4897-ad41-db6af7e17945.png)
-![Sign-in Page](https://user-images.githubusercontent.com/95927895/146681163-27b3f171-8d0e-41f9-aa14-fb6d503f6335.png)
-![Sign-up Page](https://user-images.githubusercontent.com/95927895/146681168-b36f5ff0-e76d-43ca-b07f-b10b296c7cf8.png)
-![Product List Page](https://user-images.githubusercontent.com/95927895/146681141-432753c3-adc0-41e2-bdac-17c4270ae5b6.png)
-![Product Detail Page](https://user-images.githubusercontent.com/95927895/146681144-95a0f95a-cf65-42db-b3a0-4b310eaa6e60.png)
-![Cart Page](https://user-images.githubusercontent.com/95927895/146681172-34d88112-fb5f-4b13-a176-10cd9a6613bf.png)
-![Address Page](https://user-images.githubusercontent.com/95927895/146681178-a7029d98-0f0a-4c04-8f35-b366a2a30b69.png)
-![Payment Page](https://user-images.githubusercontent.com/95927895/146681184-7334445f-8692-44be-bbe3-7f2bbfb885c9.png)
+
+
+
